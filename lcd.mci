@@ -1,0 +1,19 @@
+[Project]
+Filename=C:\PROJELER\RACAL\lcd.bas
+[Environment]
+CaretX=11
+CaretY=105
+[Version]
+Enable=1
+Rollover=255
+Major=0
+Minor=0
+Release=0
+Build=242
+[Results]
+Visible=1
+Height=117
+View=1
+[Status]
+Message=Success : 453 program words used, 84 variable bytes used
+Image=2

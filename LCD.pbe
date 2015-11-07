@@ -1,0 +1,4 @@
+16F877,453,84,10
+Reminder! Line [4]	In file [C:\PROJELER\RACAL\LCD.BAS]	*** Ensure that all fuses are placed in the Config list, as devices have differing default settings! ***
+	PROGRAM COMPILED OK. 453 Words used from a possible 8192
+	84 Variables used in the 16F877 from a possible 368
