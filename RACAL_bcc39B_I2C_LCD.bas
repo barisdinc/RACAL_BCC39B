@@ -105,13 +105,10 @@ Basla:
     Print At 2,1," (C)2015 TA7W Baris"
     Print At 4,1,"  DISPLAY TESTING"
     DelayMS 1000
-    'DelayMS 1000
-    'DelayMS 1000
     Cls
     INTE = 1
     'RBIE = 1
     GIE = 1
-
 
     Dim Segments[7] As Byte
     Dim DecValue As Byte
@@ -124,11 +121,6 @@ Basla:
     Dim DATAm As Byte
 
 LCDHazirla:
-'    BStart
-'    BusOut $3c
-'    BusOut $80
-'    BusOut $2A
-'    BStop 
     
 
             Cmd = $2A
@@ -238,54 +230,6 @@ LCDHazirla:
             Cmd = $0C '  	// **** Turn on Display
             GoSub KomutGonder
             
-
-            
-'            DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'            DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'                        
-'            Cmd = $C0 '  	// **** next line
-'            GoSub KomutGonder
-'            
-'            DelayMS 10 
-'            LcdData = "A"
-'            GoSub DataGonder
-'            
-'            DelayMS 10 
-'            LcdData = "B"
-'            GoSub DataGonder
-'
-'            DelayMS 10 
-'            LcdData = "C"
-'            GoSub DataGonder
-'            
-'            DelayMS 10
-
-
 
 Dongu:    
             'DIGIT 1      1 2 3  31 35 65
@@ -423,54 +367,105 @@ Dongu:
                 Print At 3,19, " "
             EndIf
 
-           
-'    BStart
-'    BusOut $3c
-'    BusOut $80
-'    BusOut $2A
-'    BStop 
- 
- 
-
-
-
-
             Cmd = $80 ' //80-8F ilk satir 	// **** next line
             GoSub KomutGonder
-'            Cmd = $C0 ' //80-8F ilk satir 	// **** next line
-'            GoSub KomutGonder
- '           LcdData = $B1
-            Satir="0123456789123456"
+
+
+            If Degerler[52] = 1 Then 
+                Print At 3,16, "X"
+            Else
+                Print At 3,16, " "
+            EndIf            
+            If Degerler[51] = 1 Then 
+                Print At 3,17, "X"
+            Else
+                Print At 3,17, " "
+            EndIf
+            If Degerler[17] = 1 Then 
+                Print At 3,18, "X"
+            Else
+                Print At 3,18, " "
+            EndIf
+            If Degerler[18] = 1 Then 
+                Print At 3,19, "X"
+            Else
+                Print At 3,19, " "
+            EndIf
+
+            Satir[0] = Channel
+            Satir[1] = " "
+            Satir[2] = " "
+            Satir[3] = " "
+            If Degerler[47] = 1 Then 
+                Satir[4] = "T"
+                Satir[5] = "X"
+            Else
+                Satir[4] = " "
+                Satir[5] = " "
+            EndIf
+            Satir[6] = " "
+            If Degerler[10] = 1 Then 
+                Satir[7] = "H"
+            Else 
+                Satir[7] = "L"
+            EndIf
+            Satir[8] = " "            
+            Satir[9] = FrqDigits[1]
+            Satir[10]= FrqDigits[2]
+            Satir[11]= "."
+            Satir[12]= FrqDigits[3]
+            Satir[13]= FrqDigits[4]
+            Satir[14]= FrqDigits[5]
+            Satir[15]= FrqDigits[6]
+          
             GoSub SatirGonder            
             DelayMS 10 
             Cmd = $C0 ' //80-8F ilk satir 	// **** next line
             GoSub KomutGonder
-            DelayMS 10 
+            Satir[0] = " "
+            Satir[1] = " "
+            Satir[2] = " "
+            Satir[3] = " "
+            If Degerler[13] = 1 Then 
+                Satir[4] = "R"
+                Satir[5] = "X"
+            Else
+                Satir[4] = " "
+                Satir[5] = " "
+            EndIf 
+            Satir[6] = " "
+            Satir[7] = " "
+            Satir[8] = " "            
+            If Degerler[11] = 1 Then 
+                Satir[9] = "<"
+                Satir[10]= ">"
+            Else
+                Satir[9] = " "
+                Satir[10]= " "
+            EndIf
+            Satir[11]= " "
+            If Degerler[45] = 1 Then
+                Satir[12]= "n"
+            Else
+                Satir[12]= " "
+            EndIf
+
+            If Degerler[12] = 1 Then
+                Satir[13]= "U"
+                Satir[14]= "S"
+                Satir[15]= "B"
+            Else
+                Satir[13]= "L"
+                Satir[14]= "S"
+                Satir[15]= "B"
+            EndIf
+                
+            
             GoSub SatirGonder            
             DelayMS 10 
 
 
 
-'            Cmd = $23 ' //80-8F ilk satir 	// **** next line
-'            GoSub KomutGonder
-                        
-'            Cmd = $C0 '  	// **** next line
-'            GoSub KomutGonder
-            
-'            DelayMS 10 
-'            LcdData = "S"
-'            GoSub DataGonder
- 
- 
-'            Print At 1,1,Dec Degerler[0],Dec Degerler[1],Dec Degerler[2],Dec Degerler[3],Dec Degerler[4],Dec Degerler[5],Dec Degerler[6],Dec Degerler[7],Dec Degerler[8],Dec Degerler[9],Dec Degerler[10],Dec Degerler[11],Dec Degerler[12],Dec Degerler[13],Dec Degerler[14],Dec Degerler[15],Dec Degerler[16],Dec Degerler[17],Dec Degerler[18],Dec Degerler[19]
-'            Print At 2,1,Dec Degerler[20],Dec Degerler[21],Dec Degerler[22],Dec Degerler[23],Dec Degerler[24],Dec Degerler[25],Dec Degerler[26],Dec Degerler[27],Dec Degerler[28],Dec Degerler[29],Dec Degerler[30],Dec Degerler[31],Dec Degerler[32],Dec Degerler[33]
-'            Print At 3,1,Dec Degerler[34],Dec Degerler[35],Dec Degerler[36],Dec Degerler[37],Dec Degerler[38],Dec Degerler[39],Dec Degerler[40],Dec Degerler[41],Dec Degerler[42],Dec Degerler[43],Dec Degerler[44],Dec Degerler[45],Dec Degerler[46],Dec Degerler[47],Dec Degerler[48],Dec Degerler[49],Dec Degerler[50],Dec Degerler[51],Dec Degerler[52],Dec Degerler[53]
-'            Print At 4,1,Dec Degerler[54],Dec Degerler[55],Dec Degerler[56],Dec Degerler[57],Dec Degerler[58],Dec Degerler[59],Dec Degerler[60],Dec Degerler[61],Dec Degerler[62],Dec Degerler[63],Dec Degerler[64],Dec Degerler[65],Dec Degerler[66],Dec Degerler[67]
-            'Print At 4,15,FrqDigits[1],FrqDigits[2],FrqDigits[3],FrqDigits[4],FrqDigits[5],FrqDigits[6]
-            'Print At 2,1, Dec Degerler[6], Dec Degerler[40], Dec Degerler[26], Dec Degerler[60],Dec Degerler[61], Dec Degerler[39], Dec Degerler[27]
-'            Print At 4,15,Dec Degerler[17], Dec Degerler[18], Dec Degerler[19], Dec Degerler[51],Dec Degerler[52], Dec Degerler[53]
-'            Print At 4,16,Dec Degerler[52], Dec Degerler[51], Dec Degerler[17],Dec Degerler[18]
-'              Print At 3,10,Dec Degerler[35], Dec Degerler[31], Dec Degerler[1],Dec Degerler[3], Dec Degerler[36],Dec Degerler[2],dec degerler[65]
     GoTo Dongu
               
 
@@ -590,12 +585,6 @@ SatirGonder:
     Next say
 
     Return
-
-
-
-
-
-
 End
 
 

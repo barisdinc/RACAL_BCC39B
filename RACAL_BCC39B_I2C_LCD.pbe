@@ -1,0 +1,4 @@
+16F877,2411,170,10
+Reminder! Line [16]	In file [C:\PROJELER\RACAL\RACAL_BCC39B_I2C_LCD.BAS]	*** Ensure that all fuses are placed in the Config list, as devices have differing default settings! ***
+	PROGRAM COMPILED OK. 2411 Words used from a possible 8192
+	170 Variables used in the 16F877 from a possible 368
