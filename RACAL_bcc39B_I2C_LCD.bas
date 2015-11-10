@@ -371,27 +371,6 @@ Dongu:
             GoSub KomutGonder
 
 
-            If Degerler[52] = 1 Then 
-                Print At 3,16, "X"
-            Else
-                Print At 3,16, " "
-            EndIf            
-            If Degerler[51] = 1 Then 
-                Print At 3,17, "X"
-            Else
-                Print At 3,17, " "
-            EndIf
-            If Degerler[17] = 1 Then 
-                Print At 3,18, "X"
-            Else
-                Print At 3,18, " "
-            EndIf
-            If Degerler[18] = 1 Then 
-                Print At 3,19, "X"
-            Else
-                Print At 3,19, " "
-            EndIf
-
             Satir[0] = Channel
             Satir[1] = " "
             Satir[2] = " "
@@ -422,7 +401,27 @@ Dongu:
             DelayMS 10 
             Cmd = $C0 ' //80-8F ilk satir 	// **** next line
             GoSub KomutGonder
-            Satir[0] = " "
+            If Degerler[52] = 1 Then 
+                Satir[0] = ">"
+            Else
+                Satir[0] = " "
+            EndIf            
+            If Degerler[51] = 1 Then 
+                Satir[1] = ">"
+            Else
+                Satir[1] = " "
+            EndIf            
+            If Degerler[17] = 1 Then 
+                Satir[2] = ">"
+            Else
+                Satir[2] = " "
+            EndIf            
+            If Degerler[18] = 1 Then 
+                Satir[3] = ">"
+            Else
+                Satir[3] = " "
+            EndIf            
+            
             Satir[1] = " "
             Satir[2] = " "
             Satir[3] = " "

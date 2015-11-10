@@ -1,0 +1,4 @@
+16F628A,1523,161,4
+Reminder! Line [17]	In file [C:\PROJELER\RACAL\RACAL_BC39B_I2C_LCD_PIC16F628.BAS]	*** Ensure that all fuses are placed in the Config list, as devices have differing default settings! ***
+	PROGRAM COMPILED OK. 1523 Words used from a possible 2048
+	161 Variables used in the 16F628A from a possible 224

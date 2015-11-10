@@ -2735,137 +2735,21 @@ F1_000371 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB KOMUTGONDER
         bcf STATUS,5
 ram_bank = 0
         f@call KomutGonder
-F1_000374 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[52] = 1 THEN
-        bsf STATUS,5
-ram_bank = 1
-        movf Degerler#52,W
-        bcf STATUS,5
-ram_bank = 0
-        movwf PBP#VAR0
-        movlw 1
-        subwf PBP#VAR0,W
-        set@page BC@LL43
-        btfss STATUS,2
-        goto BC@LL43
-F1_000375 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,16, "X"
-        movlw 128
-        movwf BPFH
-        movlw 163
-        f@call LCD@CRS
-        movlw 88
-        f@call PRINT
-        f@jump BC@LL44
-BC@LL43
-F1_000376 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000377 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,16, " "
-        movlw 128
-        movwf BPFH
-        movlw 163
-        f@call LCD@CRS
-        movlw 32
-        f@call PRINT
-F1_000378 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
-BC@LL44
-F1_000379 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[51] = 1 THEN
-        bsf STATUS,5
-ram_bank = 1
-        movf Degerler#51,W
-        bcf STATUS,5
-ram_bank = 0
-        movwf PBP#VAR0
-        movlw 1
-        subwf PBP#VAR0,W
-        set@page BC@LL46
-        btfss STATUS,2
-        goto BC@LL46
-F1_000380 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,17, "X"
-        movlw 128
-        movwf BPFH
-        movlw 164
-        f@call LCD@CRS
-        movlw 88
-        f@call PRINT
-        f@jump BC@LL47
-BC@LL46
-F1_000381 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000382 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,17, " "
-        movlw 128
-        movwf BPFH
-        movlw 164
-        f@call LCD@CRS
-        movlw 32
-        f@call PRINT
-F1_000383 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
-BC@LL47
-F1_000384 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[17] = 1 THEN
-        movf Degerler#17,W
-        movwf PBP#VAR0
-        movlw 1
-        subwf PBP#VAR0,W
-        set@page BC@LL49
-        btfss STATUS,2
-        goto BC@LL49
-F1_000385 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,18, "X"
-        movlw 128
-        movwf BPFH
-        movlw 165
-        f@call LCD@CRS
-        movlw 88
-        f@call PRINT
-        f@jump BC@LL50
-BC@LL49
-F1_000386 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000387 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,18, " "
-        movlw 128
-        movwf BPFH
-        movlw 165
-        f@call LCD@CRS
-        movlw 32
-        f@call PRINT
-F1_000388 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
-BC@LL50
-F1_000389 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[18] = 1 THEN
-        movf Degerler#18,W
-        movwf PBP#VAR0
-        movlw 1
-        subwf PBP#VAR0,W
-        set@page BC@LL52
-        btfss STATUS,2
-        goto BC@LL52
-F1_000390 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,19, "X"
-        movlw 128
-        movwf BPFH
-        movlw 166
-        f@call LCD@CRS
-        movlw 88
-        f@call PRINT
-        f@jump BC@LL53
-BC@LL52
-F1_000391 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000392 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,19, " "
-        movlw 128
-        movwf BPFH
-        movlw 166
-        f@call LCD@CRS
-        movlw 32
-        f@call PRINT
-F1_000393 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
-BC@LL53
-F1_000395 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[0] = CHANNEL
+F1_000374 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[0] = CHANNEL
         bsf STATUS,5
 ram_bank = 1
         movf Channel,W
         bcf STATUS,5
 ram_bank = 0
         movwf Satir#0
-F1_000396 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[1] = " "
+F1_000375 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[1] = " "
         movlw 32
         movwf Satir#1
-F1_000397 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[2] = " "
+F1_000376 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[2] = " "
         movwf Satir#2
-F1_000398 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[3] = " "
+F1_000377 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[3] = " "
         movwf Satir#3
-F1_000399 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[47] = 1 THEN
+F1_000378 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[47] = 1 THEN
         bsf STATUS,5
 ram_bank = 1
         movf Degerler#47,W
@@ -2874,51 +2758,51 @@ ram_bank = 0
         movwf PBP#VAR0
         movlw 1
         subwf PBP#VAR0,W
-        set@page BC@LL55
+        set@page BC@LL43
         btfss STATUS,2
-        goto BC@LL55
-F1_000400 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = "T"
+        goto BC@LL43
+F1_000379 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = "T"
         movlw 84
         movwf Satir#4
-F1_000401 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = "X"
+F1_000380 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = "X"
         movlw 88
         movwf Satir#5
-        f@jump BC@LL56
-BC@LL55
-F1_000402 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000403 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = " "
+        f@jump BC@LL44
+BC@LL43
+F1_000381 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000382 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = " "
         movlw 32
         movwf Satir#4
-F1_000404 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = " "
+F1_000383 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = " "
         movwf Satir#5
-F1_000405 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
-BC@LL56
-F1_000406 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[6] = " "
+F1_000384 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+BC@LL44
+F1_000385 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[6] = " "
         movlw 32
         movwf Satir#6
-F1_000407 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[10] = 1 THEN
+F1_000386 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[10] = 1 THEN
         movf Degerler#10,W
         movwf PBP#VAR0
         movlw 1
         subwf PBP#VAR0,W
-        set@page BC@LL58
+        set@page BC@LL46
         btfss STATUS,2
-        goto BC@LL58
-F1_000408 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[7] = "H"
+        goto BC@LL46
+F1_000387 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[7] = "H"
         movlw 72
         movwf Satir#7
-        f@jump BC@LL59
-BC@LL58
-F1_000409 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000410 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[7] = "L"
+        f@jump BC@LL47
+BC@LL46
+F1_000388 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000389 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[7] = "L"
         movlw 76
         movwf Satir#7
-F1_000411 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
-BC@LL59
-F1_000412 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[8] = " "
+F1_000390 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+BC@LL47
+F1_000391 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[8] = " "
         movlw 32
         movwf Satir#8
-F1_000413 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[9] = FRQDIGITS[1]
+F1_000392 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[9] = FRQDIGITS[1]
         bsf STATUS,5
 ram_bank = 1
         movf FrqDigits#1,W
@@ -2927,7 +2811,7 @@ ram_bank = 0
         movwf PBP#VAR0
         movf PBP#VAR0,W
         movwf Satir#9
-F1_000414 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[10] = FRQDIGITS[2]
+F1_000393 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[10] = FRQDIGITS[2]
         bsf STATUS,5
 ram_bank = 1
         movf FrqDigits#2,W
@@ -2936,10 +2820,10 @@ ram_bank = 0
         movwf PBP#VAR0
         movf PBP#VAR0,W
         movwf Satir#10
-F1_000415 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[11] = "."
+F1_000394 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[11] = "."
         movlw 46
         movwf Satir#11
-F1_000416 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[12] = FRQDIGITS[3]
+F1_000395 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[12] = FRQDIGITS[3]
         bsf STATUS,5
 ram_bank = 1
         movf FrqDigits#3,W
@@ -2948,7 +2832,7 @@ ram_bank = 0
         movwf PBP#VAR0
         movf PBP#VAR0,W
         movwf Satir#12
-F1_000417 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[13] = FRQDIGITS[4]
+F1_000396 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[13] = FRQDIGITS[4]
         bsf STATUS,5
 ram_bank = 1
         movf FrqDigits#4,W
@@ -2957,7 +2841,7 @@ ram_bank = 0
         movwf PBP#VAR0
         movf PBP#VAR0,W
         movwf Satir#13
-F1_000418 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[14] = FRQDIGITS[5]
+F1_000397 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[14] = FRQDIGITS[5]
         bsf STATUS,5
 ram_bank = 1
         movf FrqDigits#5,W
@@ -2966,7 +2850,7 @@ ram_bank = 0
         movwf PBP#VAR0
         movf PBP#VAR0,W
         movwf Satir#14
-F1_000419 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[15] = FRQDIGITS[6]
+F1_000398 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[15] = FRQDIGITS[6]
         bsf STATUS,5
 ram_bank = 1
         movf FrqDigits#6,W
@@ -2975,30 +2859,112 @@ ram_bank = 0
         movwf PBP#VAR0
         movf PBP#VAR0,W
         movwf Satir#15
-F1_000421 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SATIRGONDER
+F1_000400 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SATIRGONDER
         f@call SatirGonder
-F1_000422 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
+F1_000401 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
         movlw 10
         f@call __DELAY_MS_
-F1_000423 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] CMD = $C0
+F1_000402 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] CMD = $C0
         movlw 192
         bsf STATUS,5
 ram_bank = 1
         movwf Cmd
-F1_000424 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB KOMUTGONDER
+F1_000403 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB KOMUTGONDER
         bcf STATUS,5
 ram_bank = 0
         f@call KomutGonder
-F1_000425 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[0] = " "
+F1_000404 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[52] = 1 THEN
+        bsf STATUS,5
+ram_bank = 1
+        movf Degerler#52,W
+        bcf STATUS,5
+ram_bank = 0
+        movwf PBP#VAR0
+        movlw 1
+        subwf PBP#VAR0,W
+        set@page BC@LL49
+        btfss STATUS,2
+        goto BC@LL49
+F1_000405 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[0] = ">"
+        movlw 62
+        movwf Satir#0
+        f@jump BC@LL50
+BC@LL49
+F1_000406 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000407 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[0] = " "
         movlw 32
         movwf Satir#0
-F1_000426 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[1] = " "
+F1_000408 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+BC@LL50
+F1_000409 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[51] = 1 THEN
+        bsf STATUS,5
+ram_bank = 1
+        movf Degerler#51,W
+        bcf STATUS,5
+ram_bank = 0
+        movwf PBP#VAR0
+        movlw 1
+        subwf PBP#VAR0,W
+        set@page BC@LL52
+        btfss STATUS,2
+        goto BC@LL52
+F1_000410 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[1] = ">"
+        movlw 62
         movwf Satir#1
-F1_000427 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[2] = " "
+        f@jump BC@LL53
+BC@LL52
+F1_000411 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000412 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[1] = " "
+        movlw 32
+        movwf Satir#1
+F1_000413 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+BC@LL53
+F1_000414 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[17] = 1 THEN
+        movf Degerler#17,W
+        movwf PBP#VAR0
+        movlw 1
+        subwf PBP#VAR0,W
+        set@page BC@LL55
+        btfss STATUS,2
+        goto BC@LL55
+F1_000415 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[2] = ">"
+        movlw 62
         movwf Satir#2
-F1_000428 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[3] = " "
+        f@jump BC@LL56
+BC@LL55
+F1_000416 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000417 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[2] = " "
+        movlw 32
+        movwf Satir#2
+F1_000418 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+BC@LL56
+F1_000419 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[18] = 1 THEN
+        movf Degerler#18,W
+        movwf PBP#VAR0
+        movlw 1
+        subwf PBP#VAR0,W
+        set@page BC@LL58
+        btfss STATUS,2
+        goto BC@LL58
+F1_000420 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[3] = ">"
+        movlw 62
         movwf Satir#3
-F1_000429 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[13] = 1 THEN
+        f@jump BC@LL59
+BC@LL58
+F1_000421 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000422 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[3] = " "
+        movlw 32
+        movwf Satir#3
+F1_000423 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+BC@LL59
+F1_000425 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[1] = " "
+        movlw 32
+        movwf Satir#1
+F1_000426 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[2] = " "
+        movwf Satir#2
+F1_000427 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[3] = " "
+        movwf Satir#3
+F1_000428 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[13] = 1 THEN
         movf Degerler#13,W
         movwf PBP#VAR0
         movlw 1
@@ -3006,30 +2972,30 @@ F1_000429 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[13] = 1 THEN
         set@page BC@LL61
         btfss STATUS,2
         goto BC@LL61
-F1_000430 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = "R"
+F1_000429 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = "R"
         movlw 82
         movwf Satir#4
-F1_000431 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = "X"
+F1_000430 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = "X"
         movlw 88
         movwf Satir#5
         f@jump BC@LL62
 BC@LL61
-F1_000432 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000433 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = " "
+F1_000431 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000432 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[4] = " "
         movlw 32
         movwf Satir#4
-F1_000434 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = " "
+F1_000433 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[5] = " "
         movwf Satir#5
-F1_000435 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+F1_000434 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
 BC@LL62
-F1_000436 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[6] = " "
+F1_000435 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[6] = " "
         movlw 32
         movwf Satir#6
-F1_000437 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[7] = " "
+F1_000436 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[7] = " "
         movwf Satir#7
-F1_000438 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[8] = " "
+F1_000437 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[8] = " "
         movwf Satir#8
-F1_000439 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[11] = 1 THEN
+F1_000438 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[11] = 1 THEN
         movf Degerler#11,W
         movwf PBP#VAR0
         movlw 1
@@ -3037,26 +3003,26 @@ F1_000439 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[11] = 1 THEN
         set@page BC@LL64
         btfss STATUS,2
         goto BC@LL64
-F1_000440 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[9] = "<"
+F1_000439 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[9] = "<"
         movlw 60
         movwf Satir#9
-F1_000441 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[10] = ">"
+F1_000440 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[10] = ">"
         movlw 62
         movwf Satir#10
         f@jump BC@LL65
 BC@LL64
-F1_000442 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000443 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[9] = " "
+F1_000441 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000442 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[9] = " "
         movlw 32
         movwf Satir#9
-F1_000444 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[10] = " "
+F1_000443 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[10] = " "
         movwf Satir#10
-F1_000445 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+F1_000444 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
 BC@LL65
-F1_000446 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[11] = " "
+F1_000445 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[11] = " "
         movlw 32
         movwf Satir#11
-F1_000447 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[45] = 1 THEN
+F1_000446 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[45] = 1 THEN
         bsf STATUS,5
 ram_bank = 1
         movf Degerler#45,W
@@ -3068,18 +3034,18 @@ ram_bank = 0
         set@page BC@LL67
         btfss STATUS,2
         goto BC@LL67
-F1_000448 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[12] = "N"
+F1_000447 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[12] = "N"
         movlw 110
         movwf Satir#12
         f@jump BC@LL68
 BC@LL67
-F1_000449 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000450 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[12] = " "
+F1_000448 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000449 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[12] = " "
         movlw 32
         movwf Satir#12
-F1_000451 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+F1_000450 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
 BC@LL68
-F1_000453 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[12] = 1 THEN
+F1_000452 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[12] = 1 THEN
         movf Degerler#12,W
         movwf PBP#VAR0
         movlw 1
@@ -3087,38 +3053,38 @@ F1_000453 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DEGERLER[12] = 1 THEN
         set@page BC@LL70
         btfss STATUS,2
         goto BC@LL70
-F1_000454 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[13] = "U"
+F1_000453 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[13] = "U"
         movlw 85
         movwf Satir#13
-F1_000455 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[14] = "S"
+F1_000454 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[14] = "S"
         movlw 83
         movwf Satir#14
-F1_000456 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[15] = "B"
+F1_000455 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[15] = "B"
         movlw 66
         movwf Satir#15
         f@jump BC@LL71
 BC@LL70
-F1_000457 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000458 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[13] = "L"
+F1_000456 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000457 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[13] = "L"
         movlw 76
         movwf Satir#13
-F1_000459 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[14] = "S"
+F1_000458 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[14] = "S"
         movlw 83
         movwf Satir#14
-F1_000460 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[15] = "B"
+F1_000459 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] SATIR[15] = "B"
         movlw 66
         movwf Satir#15
-F1_000461 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+F1_000460 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
 BC@LL71
-F1_000464 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SATIRGONDER
+F1_000463 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SATIRGONDER
         f@call SatirGonder
-F1_000465 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
+F1_000464 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
         movlw 10
         f@call __DELAY_MS_
-F1_000469 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOTO DONGU
+F1_000468 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOTO DONGU
         f@jump Dongu
 CalcValue
-F1_000474 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DECVALUE = SEGMENTS[0]+SEGMENTS[1]*2+SEGMENTS[2]*4+SEGMENTS[3]*8+SEGMENTS[4]*16+SEGMENTS[5]*32+SEGMENTS[6]*64
+F1_000473 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DECVALUE = SEGMENTS[0]+SEGMENTS[1]*2+SEGMENTS[2]*4+SEGMENTS[3]*8+SEGMENTS[4]*16+SEGMENTS[5]*32+SEGMENTS[6]*64
         bsf STATUS,5
 ram_bank = 1
         movf Segments#0,W
@@ -3266,10 +3232,10 @@ M@LB5
         bsf STATUS,5
 ram_bank = 1
         movwf DecValue
-F1_000475 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RESVALUE = "-"
+F1_000474 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RESVALUE = "-"
         movlw 45
         movwf ResValue
-F1_000476 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 0   THEN RESVALUE = " "
+F1_000475 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 0   THEN RESVALUE = " "
         movf DecValue,F
         set@page BC@LL73
         bcf STATUS,5
@@ -3283,7 +3249,7 @@ ram_bank = 1
 BC@LL73
         bcf STATUS,5
 ram_bank = 0
-F1_000477 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 63  THEN RESVALUE = "0"
+F1_000476 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 63  THEN RESVALUE = "0"
         movlw 63
         bsf STATUS,5
 ram_bank = 1
@@ -3300,7 +3266,7 @@ ram_bank = 1
 BC@LL75
         bcf STATUS,5
 ram_bank = 0
-F1_000478 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 6   THEN RESVALUE = "1"
+F1_000477 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 6   THEN RESVALUE = "1"
         movlw 6
         bsf STATUS,5
 ram_bank = 1
@@ -3317,7 +3283,7 @@ ram_bank = 1
 BC@LL77
         bcf STATUS,5
 ram_bank = 0
-F1_000479 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 91  THEN RESVALUE = "2"
+F1_000478 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 91  THEN RESVALUE = "2"
         movlw 91
         bsf STATUS,5
 ram_bank = 1
@@ -3334,7 +3300,7 @@ ram_bank = 1
 BC@LL79
         bcf STATUS,5
 ram_bank = 0
-F1_000480 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 79  THEN RESVALUE = "3"
+F1_000479 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 79  THEN RESVALUE = "3"
         movlw 79
         bsf STATUS,5
 ram_bank = 1
@@ -3351,7 +3317,7 @@ ram_bank = 1
 BC@LL81
         bcf STATUS,5
 ram_bank = 0
-F1_000481 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 102 THEN RESVALUE = "4"
+F1_000480 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 102 THEN RESVALUE = "4"
         movlw 102
         bsf STATUS,5
 ram_bank = 1
@@ -3368,7 +3334,7 @@ ram_bank = 1
 BC@LL83
         bcf STATUS,5
 ram_bank = 0
-F1_000482 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 109 THEN RESVALUE = "5"
+F1_000481 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 109 THEN RESVALUE = "5"
         movlw 109
         bsf STATUS,5
 ram_bank = 1
@@ -3385,7 +3351,7 @@ ram_bank = 1
 BC@LL85
         bcf STATUS,5
 ram_bank = 0
-F1_000483 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 125 THEN RESVALUE = "6"
+F1_000482 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 125 THEN RESVALUE = "6"
         movlw 125
         bsf STATUS,5
 ram_bank = 1
@@ -3402,7 +3368,7 @@ ram_bank = 1
 BC@LL87
         bcf STATUS,5
 ram_bank = 0
-F1_000484 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 7   THEN RESVALUE = "7"
+F1_000483 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 7   THEN RESVALUE = "7"
         movlw 7
         bsf STATUS,5
 ram_bank = 1
@@ -3419,7 +3385,7 @@ ram_bank = 1
 BC@LL89
         bcf STATUS,5
 ram_bank = 0
-F1_000485 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 127 THEN RESVALUE = "8"
+F1_000484 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 127 THEN RESVALUE = "8"
         movlw 127
         bsf STATUS,5
 ram_bank = 1
@@ -3436,7 +3402,7 @@ ram_bank = 1
 BC@LL91
         bcf STATUS,5
 ram_bank = 0
-F1_000486 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 111 THEN RESVALUE = "9"
+F1_000485 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 111 THEN RESVALUE = "9"
         movlw 111
         bsf STATUS,5
 ram_bank = 1
@@ -3453,7 +3419,7 @@ ram_bank = 1
 BC@LL93
         bcf STATUS,5
 ram_bank = 0
-F1_000487 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 120 THEN RESVALUE = "U"
+F1_000486 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 120 THEN RESVALUE = "U"
         movlw 120
         bsf STATUS,5
 ram_bank = 1
@@ -3470,7 +3436,7 @@ ram_bank = 1
 BC@LL95
         bcf STATUS,5
 ram_bank = 0
-F1_000488 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 28  THEN RESVALUE = "U"
+F1_000487 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 28  THEN RESVALUE = "U"
         movlw 28
         bsf STATUS,5
 ram_bank = 1
@@ -3487,7 +3453,7 @@ ram_bank = 1
 BC@LL97
         bcf STATUS,5
 ram_bank = 0
-F1_000489 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 84  THEN RESVALUE = "N"
+F1_000488 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 84  THEN RESVALUE = "N"
         movlw 84
         bsf STATUS,5
 ram_bank = 1
@@ -3504,7 +3470,7 @@ ram_bank = 1
 BC@LL99
         bcf STATUS,5
 ram_bank = 0
-F1_000490 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 88  THEN RESVALUE = "E"
+F1_000489 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DECVALUE = 88  THEN RESVALUE = "E"
         movlw 88
         bsf STATUS,5
 ram_bank = 1
@@ -3521,160 +3487,160 @@ ram_bank = 1
 BC@LL101
         bcf STATUS,5
 ram_bank = 0
-F1_000506 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
+F1_000505 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
         return
 KomutGonder
-F1_000510 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SDA
+F1_000509 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SDA
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,4
         bcf STATUS,5
 ram_bank = 0
         bcf PORTC,4
-F1_000511 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+F1_000510 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
         movlw 8
         movwf PP0
         set@page ID@LB102
 ID@LB102
         decfsz PP0,F
         goto ID@LB102
-F1_000512 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
+F1_000511 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,3
         bcf STATUS,5
 ram_bank = 0
         bcf PORTC,3
-F1_000513 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+F1_000512 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
         movlw 8
         movwf PP0
         set@page ID@LB103
 ID@LB103
         decfsz PP0,F
         goto ID@LB103
-F1_000515 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $78
+F1_000514 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $78
         movlw 120
         bsf STATUS,5
 ram_bank = 1
         movwf DATAm
-F1_000516 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
+F1_000515 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
         bcf STATUS,5
 ram_bank = 0
         f@call Gonder
-F1_000517 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $80
+F1_000516 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $80
         movlw 128
         bsf STATUS,5
 ram_bank = 1
         movwf DATAm
-F1_000518 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
+F1_000517 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
         bcf STATUS,5
 ram_bank = 0
         f@call Gonder
-F1_000519 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = CMD
+F1_000518 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = CMD
         bsf STATUS,5
 ram_bank = 1
         movf Cmd,W
         movwf DATAm
-F1_000520 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
+F1_000519 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
         bcf STATUS,5
 ram_bank = 0
         f@call Gonder
-F1_000523 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
+F1_000522 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,3
         bcf STATUS,5
 ram_bank = 0
         bsf PORTC,3
-F1_000524 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+F1_000523 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
         nop
         nop
-F1_000525 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SDA
+F1_000524 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SDA
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,4
         bcf STATUS,5
 ram_bank = 0
         bsf PORTC,4
-F1_000530 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
+F1_000529 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
         return
 DataGonder
-F1_000534 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SDA
+F1_000533 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SDA
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,4
         bcf STATUS,5
 ram_bank = 0
         bcf PORTC,4
-F1_000535 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+F1_000534 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
         movlw 8
         movwf PP0
         set@page ID@LB104
 ID@LB104
         decfsz PP0,F
         goto ID@LB104
-F1_000536 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
+F1_000535 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,3
         bcf STATUS,5
 ram_bank = 0
         bcf PORTC,3
-F1_000537 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+F1_000536 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
         movlw 8
         movwf PP0
         set@page ID@LB105
 ID@LB105
         decfsz PP0,F
         goto ID@LB105
-F1_000539 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $78
+F1_000538 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $78
         movlw 120
         bsf STATUS,5
 ram_bank = 1
         movwf DATAm
-F1_000540 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
+F1_000539 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
         bcf STATUS,5
 ram_bank = 0
         f@call Gonder
-F1_000541 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $40
+F1_000540 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = $40
         movlw 64
         bsf STATUS,5
 ram_bank = 1
         movwf DATAm
-F1_000542 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
+F1_000541 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
         bcf STATUS,5
 ram_bank = 0
         f@call Gonder
-F1_000543 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = LCDDATA
+F1_000542 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = LCDDATA
         bsf STATUS,5
 ram_bank = 1
         movf LcdData,W
         movwf DATAm
-F1_000544 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
+F1_000543 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB GONDER
         bcf STATUS,5
 ram_bank = 0
         f@call Gonder
-F1_000547 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
+F1_000546 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,3
         bcf STATUS,5
 ram_bank = 0
         bsf PORTC,3
-F1_000548 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+F1_000547 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
         nop
         nop
-F1_000549 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SDA
+F1_000548 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SDA
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,4
         bcf STATUS,5
 ram_bank = 0
         bsf PORTC,4
-F1_000551 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
+F1_000550 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
         return
 Gonder
-F1_000557 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR DON = 1 TO 8
+F1_000556 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR DON = 1 TO 8
         movlw 1
         bsf STATUS,5
 ram_bank = 1
@@ -3691,7 +3657,7 @@ ram_bank = 1
 ram_bank = 0
         btfsc STATUS,0
         goto NX@LB107
-F1_000558 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DATAM.7 = 0 THEN
+F1_000557 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] IF DATAM.7 = 0 THEN
         set@page BC@LL110
         bsf STATUS,5
 ram_bank = 1
@@ -3700,7 +3666,7 @@ ram_bank = 1
 ram_bank = 0
         btfsc STATUS,0
         goto BC@LL110
-F1_000559 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SDA
+F1_000558 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SDA
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,4
@@ -3709,37 +3675,37 @@ ram_bank = 0
         bcf PORTC,4
         f@jump BC@LL111
 BC@LL110
-F1_000560 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
-F1_000561 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SDA
+F1_000559 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ELSE
+F1_000560 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SDA
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,4
         bcf STATUS,5
 ram_bank = 0
         bsf PORTC,4
-F1_000562 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
+F1_000561 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ENDIF
 BC@LL111
-F1_000563 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = DATAM << 1
+F1_000562 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAM = DATAM << 1
         bcf STATUS,0
         bsf STATUS,5
 ram_bank = 1
         rlf DATAm,F
-F1_000564 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+F1_000563 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
         nop
         nop
-F1_000565 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
+F1_000564 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
         bcf TRISC,3
         bcf STATUS,5
 ram_bank = 0
         bsf PORTC,3
-F1_000566 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
+F1_000565 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
         movlw 7
         movwf PP0
         set@page ID@LB112
 ID@LB112
         decfsz PP0,F
         goto ID@LB112
-F1_000567 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
+F1_000566 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,3
@@ -3747,7 +3713,7 @@ ram_bank = 1
 ram_bank = 0
         bcf PORTC,3
 CT@LB108
-F1_000568 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT DON
+F1_000567 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT DON
         movlw 1
         bsf STATUS,5
 ram_bank = 1
@@ -3758,34 +3724,34 @@ ram_bank = 0
         btfss STATUS,0
         goto FR@LB106
 NX@LB107
-F1_000571 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+F1_000570 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
         nop
         nop
-F1_000572 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
+F1_000571 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] HIGH SCL
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,3
         bcf STATUS,5
 ram_bank = 0
         bsf PORTC,3
-F1_000573 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
+F1_000572 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
         movlw 7
         movwf PP0
         set@page ID@LB113
 ID@LB113
         decfsz PP0,F
         goto ID@LB113
-F1_000574 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
+F1_000573 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LOW SCL
         bsf STATUS,5
 ram_bank = 1
         bcf TRISC,3
         bcf STATUS,5
 ram_bank = 0
         bcf PORTC,3
-F1_000575 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
+F1_000574 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
         return
 SatirGonder
-F1_000581 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR SAY = 0 TO 15
+F1_000580 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR SAY = 0 TO 15
         bsf STATUS,5
 ram_bank = 1
         clrf say
@@ -3801,7 +3767,7 @@ ram_bank = 1
 ram_bank = 0
         btfsc STATUS,0
         goto NX@LB115
-F1_000582 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LCDDATA = SATIR[SAY]
+F1_000581 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LCDDATA = SATIR[SAY]
         bsf STATUS,5
 ram_bank = 1
         movf say,W
@@ -3809,11 +3775,11 @@ ram_bank = 1
         movwf FSR
         movf INDF,W
         movwf LcdData
-F1_000583 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB DATAGONDER
+F1_000582 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB DATAGONDER
         bcf STATUS,5
 ram_bank = 0
         f@call DataGonder
-F1_000584 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+F1_000583 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
         movlw 8
         movwf PP0
         set@page ID@LB117
@@ -3821,7 +3787,7 @@ ID@LB117
         decfsz PP0,F
         goto ID@LB117
 CT@LB116
-F1_000585 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT SAY
+F1_000584 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT SAY
         movlw 1
         bsf STATUS,5
 ram_bank = 1
@@ -3832,9 +3798,9 @@ ram_bank = 0
         btfss STATUS,0
         goto FR@LB114
 NX@LB115
-F1_000587 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
+F1_000586 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] RETURN
         return
-F1_000588 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] END
+F1_000587 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] END
 PB@LB118
         f@jump PB@LB118
 F1_EOF equ $ ; RACAL_BCC39B_I2C_LCD.BAS

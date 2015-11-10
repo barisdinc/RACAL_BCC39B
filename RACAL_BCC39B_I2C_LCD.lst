@@ -1,4 +1,4 @@
-MPASM  5.45                               A.S   11-7-2015  21:51:56         PAGE  1
+MPASM  5.45                               A.S   11-7-2015  22:02:02         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -1457,25 +1457,25 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
                       01458         f@call LCD@CRS
 016A   3008           01459         movlw ((STR@LB1 >> 8) & 255)
 016B   00A6           01460         movwf GEN4H
-016C   30F4           01461         movlw (STR@LB1 & 255)
+016C   30C3           01461         movlw (STR@LB1 & 255)
                       01462         f@call C@STROUT
   0000016F            01463 F1_000105 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 2,1," (C)2015 TA7W BARIS"
 016F   3080           01464         movlw 128
 0170   00A1           01465         movwf BPFH
 0171   30C0           01466         movlw 192
                       01467         f@call LCD@CRS
-0174   3009           01468         movlw ((STR@LB2 >> 8) & 255)
+0174   3008           01468         movlw ((STR@LB2 >> 8) & 255)
 0175   00A6           01469         movwf GEN4H
-0176   3005           01470         movlw (STR@LB2 & 255)
+0176   30D4           01470         movlw (STR@LB2 & 255)
                       01471         f@call C@STROUT
   00000179            01472 F1_000106 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 4,1,"  DISPLAY TESTING"
 0179   3080           01473         movlw 128
 017A   00A1           01474         movwf BPFH
 017B   30D4           01475         movlw 212
                       01476         f@call LCD@CRS
-017E   3009           01477         movlw ((STR@LB3 >> 8) & 255)
+017E   3008           01477         movlw ((STR@LB3 >> 8) & 255)
 017F   00A6           01478         movwf GEN4H
-0180   3019           01479         movlw (STR@LB3 & 255)
+0180   30E8           01479         movlw (STR@LB3 & 255)
                       01480         f@call C@STROUT
   00000183            01481 F1_000107 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 1000
 0183   3003           01482         movlw 3
@@ -2396,9 +2396,9 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
   00000000            02397 ram_bank = 0
 042D   00A1           02398         movwf BPFH
                       02399         f@call LCD@CRS
-0430   3009           02400         movlw ((STR@LB4 >> 8) & 255)
+0430   3008           02400         movlw ((STR@LB4 >> 8) & 255)
 0431   00A6           02401         movwf GEN4H
-0432   302B           02402         movlw (STR@LB4 & 255)
+0432   30FA           02402         movlw (STR@LB4 & 255)
                       02403         f@call C@STROUT
 0435   1683           02404         bsf STATUS,5
   00000001            02405 ram_bank = 1
@@ -2484,7 +2484,7 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
                       02485         f@call LCD@CRS
 0485   3009           02486         movlw ((STR@LB5 >> 8) & 255)
 0486   00A6           02487         movwf GEN4H
-0487   3036           02488         movlw (STR@LB5 & 255)
+0487   3005           02488         movlw (STR@LB5 & 255)
                       02489         f@call C@STROUT
                       02490         f@jump BC@LL17
 048D                  02491 BC@LL16
@@ -2496,7 +2496,7 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
                       02497         f@call LCD@CRS
 0492   3009           02498         movlw ((STR@LB6 >> 8) & 255)
 0493   00A6           02499         movwf GEN4H
-0494   3041           02500         movlw (STR@LB6 & 255)
+0494   3010           02500         movlw (STR@LB6 & 255)
                       02501         f@call C@STROUT
   00000497            02502 F1_000327 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
 0497                  02503 BC@LL17
@@ -2515,7 +2515,7 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
                       02516         f@call LCD@CRS
 04A4   3009           02517         movlw ((STR@LB7 >> 8) & 255)
 04A5   00A6           02518         movwf GEN4H
-04A6   304C           02519         movlw (STR@LB7 & 255)
+04A6   301B           02519         movlw (STR@LB7 & 255)
                       02520         f@call C@STROUT
                       02521         f@jump BC@LL20
 04AC                  02522 BC@LL19
@@ -2527,7 +2527,7 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
                       02528         f@call LCD@CRS
 04B1   3009           02529         movlw ((STR@LB8 >> 8) & 255)
 04B2   00A6           02530         movwf GEN4H
-04B3   3057           02531         movlw (STR@LB8 & 255)
+04B3   3026           02531         movlw (STR@LB8 & 255)
                       02532         f@call C@STROUT
   000004B6            02533 F1_000332 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
 04B6                  02534 BC@LL20
@@ -2581,7 +2581,7 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
                       02582         f@call LCD@CRS
 04EC   3009           02583         movlw ((STR@LB9 >> 8) & 255)
 04ED   00A6           02584         movwf GEN4H
-04EE   3062           02585         movlw (STR@LB9 & 255)
+04EE   3031           02585         movlw (STR@LB9 & 255)
                       02586         f@call C@STROUT
 04F1   1683           02587         bsf STATUS,5
   00000001            02588 ram_bank = 1
@@ -2778,1166 +2778,1132 @@ MESSAGE[308]: WARNING LEVEL SUPERSEDED BY COMMAND LINE VALUE. (2)
 05AB   1283           02779         bcf STATUS,5
   00000000            02780 ram_bank = 0
                       02781         f@call KomutGonder
-  000005AF            02782 F1_000374 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[52] = 1 THEN
+  000005AF            02782 F1_000374 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[0] = Channel
 05AF   1683           02783         bsf STATUS,5
   00000001            02784 ram_bank = 1
-05B0   082C           02785         movf Degerler#52,W
+05B0   0863           02785         movf Channel,W
 05B1   1283           02786         bcf STATUS,5
   00000000            02787 ram_bank = 0
-05B2   00A7           02788         movwf PBP#VAR0
-05B3   3001           02789         movlw 1
-05B4   0227           02790         subwf PBP#VAR0,W
-                      02791         set@page BC@LL43
-05B7   1D03           02792         btfss STATUS,2
-05B8   2DC4           02793         goto BC@LL43
-  000005B9            02794 F1_000375 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,16, "X"
-05B9   3080           02795         movlw 128
-05BA   00A1           02796         movwf BPFH
-05BB   30A3           02797         movlw 163
-                      02798         f@call LCD@CRS
-05BE   3058           02799         movlw 88
-                      02800         f@call PRINT
-                      02801         f@jump BC@LL44
-05C4                  02802 BC@LL43
-  000005C4            02803 F1_000376 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  000005C4            02804 F1_000377 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,16, " "
-05C4   3080           02805         movlw 128
-05C5   00A1           02806         movwf BPFH
-05C6   30A3           02807         movlw 163
-                      02808         f@call LCD@CRS
-05C9   3020           02809         movlw 32
-                      02810         f@call PRINT
-  000005CC            02811 F1_000378 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-05CC                  02812 BC@LL44
-  000005CC            02813 F1_000379 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[51] = 1 THEN
-05CC   1683           02814         bsf STATUS,5
-  00000001            02815 ram_bank = 1
-05CD   082B           02816         movf Degerler#51,W
-05CE   1283           02817         bcf STATUS,5
-  00000000            02818 ram_bank = 0
-05CF   00A7           02819         movwf PBP#VAR0
-05D0   3001           02820         movlw 1
-05D1   0227           02821         subwf PBP#VAR0,W
-                      02822         set@page BC@LL46
-05D4   1D03           02823         btfss STATUS,2
-05D5   2DE1           02824         goto BC@LL46
-  000005D6            02825 F1_000380 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,17, "X"
-05D6   3080           02826         movlw 128
-05D7   00A1           02827         movwf BPFH
-05D8   30A4           02828         movlw 164
-                      02829         f@call LCD@CRS
-05DB   3058           02830         movlw 88
-                      02831         f@call PRINT
-                      02832         f@jump BC@LL47
-05E1                  02833 BC@LL46
-  000005E1            02834 F1_000381 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  000005E1            02835 F1_000382 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,17, " "
-05E1   3080           02836         movlw 128
-05E2   00A1           02837         movwf BPFH
-05E3   30A4           02838         movlw 164
-                      02839         f@call LCD@CRS
-05E6   3020           02840         movlw 32
-                      02841         f@call PRINT
-  000005E9            02842 F1_000383 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-05E9                  02843 BC@LL47
-  000005E9            02844 F1_000384 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[17] = 1 THEN
-05E9   0865           02845         movf Degerler#17,W
-05EA   00A7           02846         movwf PBP#VAR0
-05EB   3001           02847         movlw 1
-05EC   0227           02848         subwf PBP#VAR0,W
-                      02849         set@page BC@LL49
-05EF   1D03           02850         btfss STATUS,2
-05F0   2DFC           02851         goto BC@LL49
-  000005F1            02852 F1_000385 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,18, "X"
-05F1   3080           02853         movlw 128
-05F2   00A1           02854         movwf BPFH
-05F3   30A5           02855         movlw 165
-                      02856         f@call LCD@CRS
-05F6   3058           02857         movlw 88
-                      02858         f@call PRINT
-                      02859         f@jump BC@LL50
-05FC                  02860 BC@LL49
-  000005FC            02861 F1_000386 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  000005FC            02862 F1_000387 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,18, " "
-05FC   3080           02863         movlw 128
-05FD   00A1           02864         movwf BPFH
-05FE   30A5           02865         movlw 165
-                      02866         f@call LCD@CRS
-0601   3020           02867         movlw 32
-                      02868         f@call PRINT
-  00000604            02869 F1_000388 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-0604                  02870 BC@LL50
-  00000604            02871 F1_000389 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[18] = 1 THEN
-0604   0866           02872         movf Degerler#18,W
-0605   00A7           02873         movwf PBP#VAR0
-0606   3001           02874         movlw 1
-0607   0227           02875         subwf PBP#VAR0,W
-                      02876         set@page BC@LL52
-060A   1D03           02877         btfss STATUS,2
-060B   2E17           02878         goto BC@LL52
-  0000060C            02879 F1_000390 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,19, "X"
-060C   3080           02880         movlw 128
-060D   00A1           02881         movwf BPFH
-060E   30A6           02882         movlw 166
-                      02883         f@call LCD@CRS
-0611   3058           02884         movlw 88
-                      02885         f@call PRINT
-                      02886         f@jump BC@LL53
-0617                  02887 BC@LL52
-  00000617            02888 F1_000391 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  00000617            02889 F1_000392 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] PRINT AT 3,19, " "
-0617   3080           02890         movlw 128
-0618   00A1           02891         movwf BPFH
-0619   30A6           02892         movlw 166
-                      02893         f@call LCD@CRS
-061C   3020           02894         movlw 32
-                      02895         f@call PRINT
-  0000061F            02896 F1_000393 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-061F                  02897 BC@LL53
-  0000061F            02898 F1_000395 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[0] = Channel
-061F   1683           02899         bsf STATUS,5
-  00000001            02900 ram_bank = 1
-0620   0863           02901         movf Channel,W
-0621   1283           02902         bcf STATUS,5
-  00000000            02903 ram_bank = 0
-0622   00C4           02904         movwf Satir#0
-  00000623            02905 F1_000396 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[1] = " "
-0623   3020           02906         movlw 32
-0624   00C5           02907         movwf Satir#1
-  00000625            02908 F1_000397 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[2] = " "
-0625   00C6           02909         movwf Satir#2
-  00000626            02910 F1_000398 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[3] = " "
-0626   00C7           02911         movwf Satir#3
-  00000627            02912 F1_000399 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[47] = 1 THEN
-0627   1683           02913         bsf STATUS,5
+05B2   00C4           02788         movwf Satir#0
+  000005B3            02789 F1_000375 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[1] = " "
+05B3   3020           02790         movlw 32
+05B4   00C5           02791         movwf Satir#1
+  000005B5            02792 F1_000376 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[2] = " "
+05B5   00C6           02793         movwf Satir#2
+  000005B6            02794 F1_000377 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[3] = " "
+05B6   00C7           02795         movwf Satir#3
+  000005B7            02796 F1_000378 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[47] = 1 THEN
+05B7   1683           02797         bsf STATUS,5
+  00000001            02798 ram_bank = 1
+05B8   0827           02799         movf Degerler#47,W
+05B9   1283           02800         bcf STATUS,5
+  00000000            02801 ram_bank = 0
+05BA   00A7           02802         movwf PBP#VAR0
+05BB   3001           02803         movlw 1
+05BC   0227           02804         subwf PBP#VAR0,W
+                      02805         set@page BC@LL43
+05BF   1D03           02806         btfss STATUS,2
+05C0   2DC8           02807         goto BC@LL43
+  000005C1            02808 F1_000379 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = "T"
+05C1   3054           02809         movlw 84
+05C2   00C8           02810         movwf Satir#4
+  000005C3            02811 F1_000380 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = "X"
+05C3   3058           02812         movlw 88
+05C4   00C9           02813         movwf Satir#5
+                      02814         f@jump BC@LL44
+05C8                  02815 BC@LL43
+  000005C8            02816 F1_000381 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  000005C8            02817 F1_000382 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = " "
+05C8   3020           02818         movlw 32
+05C9   00C8           02819         movwf Satir#4
+  000005CA            02820 F1_000383 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = " "
+05CA   00C9           02821         movwf Satir#5
+  000005CB            02822 F1_000384 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+05CB                  02823 BC@LL44
+  000005CB            02824 F1_000385 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[6] = " "
+05CB   3020           02825         movlw 32
+05CC   00CA           02826         movwf Satir#6
+  000005CD            02827 F1_000386 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[10] = 1 THEN
+05CD   085E           02828         movf Degerler#10,W
+05CE   00A7           02829         movwf PBP#VAR0
+05CF   3001           02830         movlw 1
+05D0   0227           02831         subwf PBP#VAR0,W
+                      02832         set@page BC@LL46
+05D3   1D03           02833         btfss STATUS,2
+05D4   2DDA           02834         goto BC@LL46
+  000005D5            02835 F1_000387 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[7] = "H"
+05D5   3048           02836         movlw 72
+05D6   00CB           02837         movwf Satir#7
+                      02838         f@jump BC@LL47
+05DA                  02839 BC@LL46
+  000005DA            02840 F1_000388 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  000005DA            02841 F1_000389 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[7] = "L"
+05DA   304C           02842         movlw 76
+05DB   00CB           02843         movwf Satir#7
+  000005DC            02844 F1_000390 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+05DC                  02845 BC@LL47
+  000005DC            02846 F1_000391 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[8] = " "
+05DC   3020           02847         movlw 32
+05DD   00CC           02848         movwf Satir#8
+  000005DE            02849 F1_000392 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[9] = FrqDigits[1]
+05DE   1683           02850         bsf STATUS,5
+  00000001            02851 ram_bank = 1
+05DF   085D           02852         movf FrqDigits#1,W
+05E0   1283           02853         bcf STATUS,5
+  00000000            02854 ram_bank = 0
+05E1   00A7           02855         movwf PBP#VAR0
+05E2   0827           02856         movf PBP#VAR0,W
+05E3   00CD           02857         movwf Satir#9
+  000005E4            02858 F1_000393 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[10] = FrqDigits[2]
+05E4   1683           02859         bsf STATUS,5
+  00000001            02860 ram_bank = 1
+05E5   085E           02861         movf FrqDigits#2,W
+05E6   1283           02862         bcf STATUS,5
+  00000000            02863 ram_bank = 0
+05E7   00A7           02864         movwf PBP#VAR0
+05E8   0827           02865         movf PBP#VAR0,W
+05E9   00CE           02866         movwf Satir#10
+  000005EA            02867 F1_000394 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[11] = "."
+05EA   302E           02868         movlw 46
+05EB   00CF           02869         movwf Satir#11
+  000005EC            02870 F1_000395 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[12] = FrqDigits[3]
+05EC   1683           02871         bsf STATUS,5
+  00000001            02872 ram_bank = 1
+05ED   085F           02873         movf FrqDigits#3,W
+05EE   1283           02874         bcf STATUS,5
+  00000000            02875 ram_bank = 0
+05EF   00A7           02876         movwf PBP#VAR0
+05F0   0827           02877         movf PBP#VAR0,W
+05F1   00D0           02878         movwf Satir#12
+  000005F2            02879 F1_000396 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[13] = FrqDigits[4]
+05F2   1683           02880         bsf STATUS,5
+  00000001            02881 ram_bank = 1
+05F3   0860           02882         movf FrqDigits#4,W
+05F4   1283           02883         bcf STATUS,5
+  00000000            02884 ram_bank = 0
+05F5   00A7           02885         movwf PBP#VAR0
+05F6   0827           02886         movf PBP#VAR0,W
+05F7   00D1           02887         movwf Satir#13
+  000005F8            02888 F1_000397 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[14] = FrqDigits[5]
+05F8   1683           02889         bsf STATUS,5
+  00000001            02890 ram_bank = 1
+05F9   0861           02891         movf FrqDigits#5,W
+05FA   1283           02892         bcf STATUS,5
+  00000000            02893 ram_bank = 0
+05FB   00A7           02894         movwf PBP#VAR0
+05FC   0827           02895         movf PBP#VAR0,W
+05FD   00D2           02896         movwf Satir#14
+  000005FE            02897 F1_000398 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[15] = FrqDigits[6]
+05FE   1683           02898         bsf STATUS,5
+  00000001            02899 ram_bank = 1
+05FF   0862           02900         movf FrqDigits#6,W
+0600   1283           02901         bcf STATUS,5
+  00000000            02902 ram_bank = 0
+0601   00A7           02903         movwf PBP#VAR0
+0602   0827           02904         movf PBP#VAR0,W
+0603   00D3           02905         movwf Satir#15
+  00000604            02906 F1_000400 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SatirGonder
+                      02907         f@call SatirGonder
+  00000607            02908 F1_000401 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
+0607   300A           02909         movlw 10
+                      02910         f@call __DELAY_MS_
+  0000060A            02911 F1_000402 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Cmd = $C0
+060A   30C0           02912         movlw 192
+060B   1683           02913         bsf STATUS,5
   00000001            02914 ram_bank = 1
-0628   0827           02915         movf Degerler#47,W
-0629   1283           02916         bcf STATUS,5
-  00000000            02917 ram_bank = 0
-062A   00A7           02918         movwf PBP#VAR0
-062B   3001           02919         movlw 1
-062C   0227           02920         subwf PBP#VAR0,W
-                      02921         set@page BC@LL55
-062F   1D03           02922         btfss STATUS,2
-0630   2E38           02923         goto BC@LL55
-  00000631            02924 F1_000400 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = "T"
-0631   3054           02925         movlw 84
-0632   00C8           02926         movwf Satir#4
-  00000633            02927 F1_000401 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = "X"
-0633   3058           02928         movlw 88
-0634   00C9           02929         movwf Satir#5
-                      02930         f@jump BC@LL56
-0638                  02931 BC@LL55
-  00000638            02932 F1_000402 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  00000638            02933 F1_000403 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = " "
-0638   3020           02934         movlw 32
-0639   00C8           02935         movwf Satir#4
-  0000063A            02936 F1_000404 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = " "
-063A   00C9           02937         movwf Satir#5
-  0000063B            02938 F1_000405 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-063B                  02939 BC@LL56
-  0000063B            02940 F1_000406 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[6] = " "
-063B   3020           02941         movlw 32
-063C   00CA           02942         movwf Satir#6
-  0000063D            02943 F1_000407 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[10] = 1 THEN
-063D   085E           02944         movf Degerler#10,W
-063E   00A7           02945         movwf PBP#VAR0
-063F   3001           02946         movlw 1
-0640   0227           02947         subwf PBP#VAR0,W
-                      02948         set@page BC@LL58
-0643   1D03           02949         btfss STATUS,2
-0644   2E4A           02950         goto BC@LL58
-  00000645            02951 F1_000408 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[7] = "H"
-0645   3048           02952         movlw 72
-0646   00CB           02953         movwf Satir#7
-                      02954         f@jump BC@LL59
-064A                  02955 BC@LL58
-  0000064A            02956 F1_000409 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  0000064A            02957 F1_000410 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[7] = "L"
-064A   304C           02958         movlw 76
-064B   00CB           02959         movwf Satir#7
-  0000064C            02960 F1_000411 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-064C                  02961 BC@LL59
-  0000064C            02962 F1_000412 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[8] = " "
-064C   3020           02963         movlw 32
-064D   00CC           02964         movwf Satir#8
-  0000064E            02965 F1_000413 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[9] = FrqDigits[1]
-064E   1683           02966         bsf STATUS,5
-  00000001            02967 ram_bank = 1
-064F   085D           02968         movf FrqDigits#1,W
-0650   1283           02969         bcf STATUS,5
-  00000000            02970 ram_bank = 0
-0651   00A7           02971         movwf PBP#VAR0
-0652   0827           02972         movf PBP#VAR0,W
-0653   00CD           02973         movwf Satir#9
-  00000654            02974 F1_000414 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[10] = FrqDigits[2]
-0654   1683           02975         bsf STATUS,5
-  00000001            02976 ram_bank = 1
-0655   085E           02977         movf FrqDigits#2,W
-0656   1283           02978         bcf STATUS,5
-  00000000            02979 ram_bank = 0
-0657   00A7           02980         movwf PBP#VAR0
-0658   0827           02981         movf PBP#VAR0,W
-0659   00CE           02982         movwf Satir#10
-  0000065A            02983 F1_000415 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[11] = "."
-065A   302E           02984         movlw 46
-065B   00CF           02985         movwf Satir#11
-  0000065C            02986 F1_000416 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[12] = FrqDigits[3]
-065C   1683           02987         bsf STATUS,5
-  00000001            02988 ram_bank = 1
-065D   085F           02989         movf FrqDigits#3,W
-065E   1283           02990         bcf STATUS,5
-  00000000            02991 ram_bank = 0
-065F   00A7           02992         movwf PBP#VAR0
-0660   0827           02993         movf PBP#VAR0,W
-0661   00D0           02994         movwf Satir#12
-  00000662            02995 F1_000417 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[13] = FrqDigits[4]
-0662   1683           02996         bsf STATUS,5
-  00000001            02997 ram_bank = 1
-0663   0860           02998         movf FrqDigits#4,W
-0664   1283           02999         bcf STATUS,5
-  00000000            03000 ram_bank = 0
-0665   00A7           03001         movwf PBP#VAR0
-0666   0827           03002         movf PBP#VAR0,W
-0667   00D1           03003         movwf Satir#13
-  00000668            03004 F1_000418 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[14] = FrqDigits[5]
-0668   1683           03005         bsf STATUS,5
-  00000001            03006 ram_bank = 1
-0669   0861           03007         movf FrqDigits#5,W
-066A   1283           03008         bcf STATUS,5
-  00000000            03009 ram_bank = 0
-066B   00A7           03010         movwf PBP#VAR0
-066C   0827           03011         movf PBP#VAR0,W
-066D   00D2           03012         movwf Satir#14
-  0000066E            03013 F1_000419 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[15] = FrqDigits[6]
-066E   1683           03014         bsf STATUS,5
-  00000001            03015 ram_bank = 1
-066F   0862           03016         movf FrqDigits#6,W
-0670   1283           03017         bcf STATUS,5
-  00000000            03018 ram_bank = 0
-0671   00A7           03019         movwf PBP#VAR0
-0672   0827           03020         movf PBP#VAR0,W
-0673   00D3           03021         movwf Satir#15
-  00000674            03022 F1_000421 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SatirGonder
-                      03023         f@call SatirGonder
-  00000677            03024 F1_000422 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
-0677   300A           03025         movlw 10
-                      03026         f@call __DELAY_MS_
-  0000067A            03027 F1_000423 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Cmd = $C0
-067A   30C0           03028         movlw 192
-067B   1683           03029         bsf STATUS,5
-  00000001            03030 ram_bank = 1
-067C   00E4           03031         movwf Cmd
-  0000067D            03032 F1_000424 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB KomutGonder
-067D   1283           03033         bcf STATUS,5
-  00000000            03034 ram_bank = 0
-                      03035         f@call KomutGonder
-  00000681            03036 F1_000425 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[0] = " "
-0681   3020           03037         movlw 32
-0682   00C4           03038         movwf Satir#0
-  00000683            03039 F1_000426 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[1] = " "
-0683   00C5           03040         movwf Satir#1
-  00000684            03041 F1_000427 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[2] = " "
-0684   00C6           03042         movwf Satir#2
-  00000685            03043 F1_000428 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[3] = " "
-0685   00C7           03044         movwf Satir#3
-  00000686            03045 F1_000429 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[13] = 1 THEN
-0686   0861           03046         movf Degerler#13,W
-0687   00A7           03047         movwf PBP#VAR0
-0688   3001           03048         movlw 1
-0689   0227           03049         subwf PBP#VAR0,W
-                      03050         set@page BC@LL61
-068C   1D03           03051         btfss STATUS,2
-068D   2E95           03052         goto BC@LL61
-  0000068E            03053 F1_000430 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = "R"
-068E   3052           03054         movlw 82
-068F   00C8           03055         movwf Satir#4
-  00000690            03056 F1_000431 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = "X"
-0690   3058           03057         movlw 88
-0691   00C9           03058         movwf Satir#5
-                      03059         f@jump BC@LL62
-0695                  03060 BC@LL61
-  00000695            03061 F1_000432 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  00000695            03062 F1_000433 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = " "
-0695   3020           03063         movlw 32
-0696   00C8           03064         movwf Satir#4
-  00000697            03065 F1_000434 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = " "
-0697   00C9           03066         movwf Satir#5
-  00000698            03067 F1_000435 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-0698                  03068 BC@LL62
-  00000698            03069 F1_000436 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[6] = " "
-0698   3020           03070         movlw 32
-0699   00CA           03071         movwf Satir#6
-  0000069A            03072 F1_000437 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[7] = " "
-069A   00CB           03073         movwf Satir#7
-  0000069B            03074 F1_000438 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[8] = " "
-069B   00CC           03075         movwf Satir#8
-  0000069C            03076 F1_000439 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[11] = 1 THEN
-069C   085F           03077         movf Degerler#11,W
-069D   00A7           03078         movwf PBP#VAR0
-069E   3001           03079         movlw 1
-069F   0227           03080         subwf PBP#VAR0,W
-                      03081         set@page BC@LL64
-06A2   1D03           03082         btfss STATUS,2
-06A3   2EAB           03083         goto BC@LL64
-  000006A4            03084 F1_000440 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[9] = "<"
-06A4   303C           03085         movlw 60
-06A5   00CD           03086         movwf Satir#9
-  000006A6            03087 F1_000441 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[10] = ">"
-06A6   303E           03088         movlw 62
-06A7   00CE           03089         movwf Satir#10
-                      03090         f@jump BC@LL65
-06AB                  03091 BC@LL64
-  000006AB            03092 F1_000442 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  000006AB            03093 F1_000443 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[9] = " "
-06AB   3020           03094         movlw 32
-06AC   00CD           03095         movwf Satir#9
-  000006AD            03096 F1_000444 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[10] = " "
-06AD   00CE           03097         movwf Satir#10
-  000006AE            03098 F1_000445 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-06AE                  03099 BC@LL65
-  000006AE            03100 F1_000446 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[11] = " "
-06AE   3020           03101         movlw 32
-06AF   00CF           03102         movwf Satir#11
-  000006B0            03103 F1_000447 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[45] = 1 THEN
-06B0   1683           03104         bsf STATUS,5
-  00000001            03105 ram_bank = 1
-06B1   0825           03106         movf Degerler#45,W
-06B2   1283           03107         bcf STATUS,5
-  00000000            03108 ram_bank = 0
-06B3   00A7           03109         movwf PBP#VAR0
-06B4   3001           03110         movlw 1
-06B5   0227           03111         subwf PBP#VAR0,W
-                      03112         set@page BC@LL67
-06B8   1D03           03113         btfss STATUS,2
-06B9   2EBF           03114         goto BC@LL67
-  000006BA            03115 F1_000448 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[12] = "N"
-06BA   306E           03116         movlw 110
-06BB   00D0           03117         movwf Satir#12
-                      03118         f@jump BC@LL68
-06BF                  03119 BC@LL67
-  000006BF            03120 F1_000449 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  000006BF            03121 F1_000450 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[12] = " "
-06BF   3020           03122         movlw 32
-06C0   00D0           03123         movwf Satir#12
-  000006C1            03124 F1_000451 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-06C1                  03125 BC@LL68
-  000006C1            03126 F1_000453 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[12] = 1 THEN
-06C1   0860           03127         movf Degerler#12,W
-06C2   00A7           03128         movwf PBP#VAR0
-06C3   3001           03129         movlw 1
-06C4   0227           03130         subwf PBP#VAR0,W
-                      03131         set@page BC@LL70
-06C7   1D03           03132         btfss STATUS,2
-06C8   2ED2           03133         goto BC@LL70
-  000006C9            03134 F1_000454 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[13] = "U"
-06C9   3055           03135         movlw 85
-06CA   00D1           03136         movwf Satir#13
-  000006CB            03137 F1_000455 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[14] = "S"
-06CB   3053           03138         movlw 83
-06CC   00D2           03139         movwf Satir#14
-  000006CD            03140 F1_000456 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[15] = "B"
-06CD   3042           03141         movlw 66
-06CE   00D3           03142         movwf Satir#15
-                      03143         f@jump BC@LL71
-06D2                  03144 BC@LL70
-  000006D2            03145 F1_000457 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  000006D2            03146 F1_000458 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[13] = "L"
-06D2   304C           03147         movlw 76
-06D3   00D1           03148         movwf Satir#13
-  000006D4            03149 F1_000459 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[14] = "S"
-06D4   3053           03150         movlw 83
-06D5   00D2           03151         movwf Satir#14
-  000006D6            03152 F1_000460 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[15] = "B"
-06D6   3042           03153         movlw 66
-06D7   00D3           03154         movwf Satir#15
-  000006D8            03155 F1_000461 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-06D8                  03156 BC@LL71
-  000006D8            03157 F1_000464 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SatirGonder
-                      03158         f@call SatirGonder
-  000006DB            03159 F1_000465 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
-06DB   300A           03160         movlw 10
-                      03161         f@call __DELAY_MS_
-  000006DE            03162 F1_000469 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] goto Dongu
-                      03163         f@jump Dongu
-06E0                  03164 CalcValue
-  000006E0            03165 F1_000474 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DecValue = Segments[0]+Segments[1]*2+Segments[2]*4+Segments[3]*8+Segments[4]*16+Segments[5]*32+Segments[6]*64
-06E0   1683           03166         bsf STATUS,5
-  00000001            03167 ram_bank = 1
-06E1   0853           03168         movf Segments#0,W
-06E2   1283           03169         bcf STATUS,5
-  00000000            03170 ram_bank = 0
-06E3   00A7           03171         movwf PBP#VAR0
-06E4   01BB           03172         clrf PP7H
-06E5   0827           03173         movf PBP#VAR0,W
-06E6   00BA           03174         movwf PP7
-06E7   1683           03175         bsf STATUS,5
-  00000001            03176 ram_bank = 1
-06E8   0854           03177         movf Segments#1,W
-06E9   1283           03178         bcf STATUS,5
-  00000000            03179 ram_bank = 0
-06EA   00A8           03180         movwf PBP#VAR1
-06EB   01BD           03181         clrf PP8H
-06EC   0828           03182         movf PBP#VAR1,W
-06ED   00BC           03183         movwf PP8
-06EE   1003           03184         bcf STATUS,0
-06EF   0DBC           03185         rlf PP8,F
-06F0   0DBD           03186         rlf PP8H,F
-06F1   083C           03187         movf PP8,W
-06F2   07BA           03188         addwf PP7,F
-06F3   083D           03189         movf PP8H,W
-06F4   1803           03190         btfsc STATUS,0
-06F5   3E01           03191         addlw 1
-06F6   07BB           03192         addwf PP7H,F
-06F7   1683           03193         bsf STATUS,5
-  00000001            03194 ram_bank = 1
-06F8   0855           03195         movf Segments#2,W
-06F9   1283           03196         bcf STATUS,5
-  00000000            03197 ram_bank = 0
-06FA   00A9           03198         movwf PBP#VAR2
-06FB   01BD           03199         clrf PP8H
-06FC   0829           03200         movf PBP#VAR2,W
-06FD   00BC           03201         movwf PP8
-06FE   0DBC           03202         rlf PP8,F
-06FF   0DBD           03203         rlf PP8H,F
-0700   0DBC           03204         rlf PP8,F
-0701   0DBD           03205         rlf PP8H,F
-0702   30FC           03206         movlw 252
-0703   05BC           03207         andwf PP8,F
-0704   083C           03208         movf PP8,W
-0705   07BA           03209         addwf PP7,F
-0706   083D           03210         movf PP8H,W
-0707   1803           03211         btfsc STATUS,0
-0708   3E01           03212         addlw 1
-0709   07BB           03213         addwf PP7H,F
-070A   1683           03214         bsf STATUS,5
-  00000001            03215 ram_bank = 1
-070B   0856           03216         movf Segments#3,W
-070C   1283           03217         bcf STATUS,5
-  00000000            03218 ram_bank = 0
-070D   00AA           03219         movwf PBP#VAR3
-070E   01BD           03220         clrf PP8H
-070F   082A           03221         movf PBP#VAR3,W
-0710   00BC           03222         movwf PP8
-0711   3003           03223         movlw 3
-0712   00AE           03224         movwf PP0
-0713                  03225 M@LB2
-0713   1003           03226         bcf STATUS,0
-0714   0DBC           03227         rlf PP8,F
-0715   0DBD           03228         rlf PP8H,F
-0716   03AE           03229         decf PP0,F
-                      03230         set@page M@LB2
-0719   1D03           03231         btfss STATUS,2
-071A   2F13           03232         goto M@LB2
-071B   083C           03233         movf PP8,W
-071C   07BA           03234         addwf PP7,F
-071D   083D           03235         movf PP8H,W
-071E   1803           03236         btfsc STATUS,0
-071F   3E01           03237         addlw 1
-0720   07BB           03238         addwf PP7H,F
-0721   1683           03239         bsf STATUS,5
-  00000001            03240 ram_bank = 1
-0722   0857           03241         movf Segments#4,W
-0723   1283           03242         bcf STATUS,5
-  00000000            03243 ram_bank = 0
-0724   00AB           03244         movwf PBP#VAR4
-0725   01BD           03245         clrf PP8H
-0726   082B           03246         movf PBP#VAR4,W
-0727   00BC           03247         movwf PP8
-0728   3004           03248         movlw 4
-0729   00AE           03249         movwf PP0
-072A                  03250 M@LB3
-072A   1003           03251         bcf STATUS,0
-072B   0DBC           03252         rlf PP8,F
-072C   0DBD           03253         rlf PP8H,F
-072D   03AE           03254         decf PP0,F
-                      03255         set@page M@LB3
-0730   1D03           03256         btfss STATUS,2
-0731   2F2A           03257         goto M@LB3
-0732   083C           03258         movf PP8,W
-0733   07BA           03259         addwf PP7,F
-0734   083D           03260         movf PP8H,W
-0735   1803           03261         btfsc STATUS,0
-0736   3E01           03262         addlw 1
-0737   07BB           03263         addwf PP7H,F
-0738   1683           03264         bsf STATUS,5
-  00000001            03265 ram_bank = 1
-0739   0858           03266         movf Segments#5,W
-073A   1283           03267         bcf STATUS,5
-  00000000            03268 ram_bank = 0
-073B   00AC           03269         movwf PBP#VAR5
-073C   01BD           03270         clrf PP8H
-073D   082C           03271         movf PBP#VAR5,W
-073E   00BC           03272         movwf PP8
-073F   3005           03273         movlw 5
-0740   00AE           03274         movwf PP0
-0741                  03275 M@LB4
-0741   1003           03276         bcf STATUS,0
-0742   0DBC           03277         rlf PP8,F
-0743   0DBD           03278         rlf PP8H,F
-0744   03AE           03279         decf PP0,F
-                      03280         set@page M@LB4
-0747   1D03           03281         btfss STATUS,2
-0748   2F41           03282         goto M@LB4
-0749   083C           03283         movf PP8,W
-074A   07BA           03284         addwf PP7,F
-074B   083D           03285         movf PP8H,W
-074C   1803           03286         btfsc STATUS,0
-074D   3E01           03287         addlw 1
-074E   07BB           03288         addwf PP7H,F
-074F   1683           03289         bsf STATUS,5
-  00000001            03290 ram_bank = 1
-0750   0859           03291         movf Segments#6,W
-0751   1283           03292         bcf STATUS,5
-  00000000            03293 ram_bank = 0
-0752   00AD           03294         movwf PBP#VAR6
-0753   01BD           03295         clrf PP8H
-0754   082D           03296         movf PBP#VAR6,W
-0755   00BC           03297         movwf PP8
-0756   3006           03298         movlw 6
-0757   00AE           03299         movwf PP0
-0758                  03300 M@LB5
-0758   1003           03301         bcf STATUS,0
-0759   0DBC           03302         rlf PP8,F
-075A   0DBD           03303         rlf PP8H,F
-075B   03AE           03304         decf PP0,F
-                      03305         set@page M@LB5
-075E   1D03           03306         btfss STATUS,2
-075F   2F58           03307         goto M@LB5
-0760   083A           03308         movf PP7,W
-0761   073C           03309         addwf PP8,W
-0762   1683           03310         bsf STATUS,5
-  00000001            03311 ram_bank = 1
-0763   00DA           03312         movwf DecValue
-  00000764            03313 F1_000475 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ResValue = "-"
-0764   302D           03314         movlw 45
-0765   00DB           03315         movwf ResValue
-  00000766            03316 F1_000476 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 0   THEN ResValue = " "
-0766   08DA           03317         movf DecValue,F
-                      03318         set@page BC@LL73
-0769   1283           03319         bcf STATUS,5
+060C   00E4           02915         movwf Cmd
+  0000060D            02916 F1_000403 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB KomutGonder
+060D   1283           02917         bcf STATUS,5
+  00000000            02918 ram_bank = 0
+                      02919         f@call KomutGonder
+  00000611            02920 F1_000404 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[52] = 1 THEN
+0611   1683           02921         bsf STATUS,5
+  00000001            02922 ram_bank = 1
+0612   082C           02923         movf Degerler#52,W
+0613   1283           02924         bcf STATUS,5
+  00000000            02925 ram_bank = 0
+0614   00A7           02926         movwf PBP#VAR0
+0615   3001           02927         movlw 1
+0616   0227           02928         subwf PBP#VAR0,W
+                      02929         set@page BC@LL49
+0619   1D03           02930         btfss STATUS,2
+061A   2E20           02931         goto BC@LL49
+  0000061B            02932 F1_000405 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[0] = ">"
+061B   303E           02933         movlw 62
+061C   00C4           02934         movwf Satir#0
+                      02935         f@jump BC@LL50
+0620                  02936 BC@LL49
+  00000620            02937 F1_000406 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  00000620            02938 F1_000407 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[0] = " "
+0620   3020           02939         movlw 32
+0621   00C4           02940         movwf Satir#0
+  00000622            02941 F1_000408 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+0622                  02942 BC@LL50
+  00000622            02943 F1_000409 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[51] = 1 THEN
+0622   1683           02944         bsf STATUS,5
+  00000001            02945 ram_bank = 1
+0623   082B           02946         movf Degerler#51,W
+0624   1283           02947         bcf STATUS,5
+  00000000            02948 ram_bank = 0
+0625   00A7           02949         movwf PBP#VAR0
+0626   3001           02950         movlw 1
+0627   0227           02951         subwf PBP#VAR0,W
+                      02952         set@page BC@LL52
+062A   1D03           02953         btfss STATUS,2
+062B   2E31           02954         goto BC@LL52
+  0000062C            02955 F1_000410 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[1] = ">"
+062C   303E           02956         movlw 62
+062D   00C5           02957         movwf Satir#1
+                      02958         f@jump BC@LL53
+0631                  02959 BC@LL52
+  00000631            02960 F1_000411 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  00000631            02961 F1_000412 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[1] = " "
+0631   3020           02962         movlw 32
+0632   00C5           02963         movwf Satir#1
+  00000633            02964 F1_000413 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+0633                  02965 BC@LL53
+  00000633            02966 F1_000414 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[17] = 1 THEN
+0633   0865           02967         movf Degerler#17,W
+0634   00A7           02968         movwf PBP#VAR0
+0635   3001           02969         movlw 1
+0636   0227           02970         subwf PBP#VAR0,W
+                      02971         set@page BC@LL55
+0639   1D03           02972         btfss STATUS,2
+063A   2E40           02973         goto BC@LL55
+  0000063B            02974 F1_000415 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[2] = ">"
+063B   303E           02975         movlw 62
+063C   00C6           02976         movwf Satir#2
+                      02977         f@jump BC@LL56
+0640                  02978 BC@LL55
+  00000640            02979 F1_000416 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  00000640            02980 F1_000417 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[2] = " "
+0640   3020           02981         movlw 32
+0641   00C6           02982         movwf Satir#2
+  00000642            02983 F1_000418 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+0642                  02984 BC@LL56
+  00000642            02985 F1_000419 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[18] = 1 THEN
+0642   0866           02986         movf Degerler#18,W
+0643   00A7           02987         movwf PBP#VAR0
+0644   3001           02988         movlw 1
+0645   0227           02989         subwf PBP#VAR0,W
+                      02990         set@page BC@LL58
+0648   1D03           02991         btfss STATUS,2
+0649   2E4F           02992         goto BC@LL58
+  0000064A            02993 F1_000420 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[3] = ">"
+064A   303E           02994         movlw 62
+064B   00C7           02995         movwf Satir#3
+                      02996         f@jump BC@LL59
+064F                  02997 BC@LL58
+  0000064F            02998 F1_000421 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  0000064F            02999 F1_000422 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[3] = " "
+064F   3020           03000         movlw 32
+0650   00C7           03001         movwf Satir#3
+  00000651            03002 F1_000423 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+0651                  03003 BC@LL59
+  00000651            03004 F1_000425 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[1] = " "
+0651   3020           03005         movlw 32
+0652   00C5           03006         movwf Satir#1
+  00000653            03007 F1_000426 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[2] = " "
+0653   00C6           03008         movwf Satir#2
+  00000654            03009 F1_000427 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[3] = " "
+0654   00C7           03010         movwf Satir#3
+  00000655            03011 F1_000428 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[13] = 1 THEN
+0655   0861           03012         movf Degerler#13,W
+0656   00A7           03013         movwf PBP#VAR0
+0657   3001           03014         movlw 1
+0658   0227           03015         subwf PBP#VAR0,W
+                      03016         set@page BC@LL61
+065B   1D03           03017         btfss STATUS,2
+065C   2E64           03018         goto BC@LL61
+  0000065D            03019 F1_000429 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = "R"
+065D   3052           03020         movlw 82
+065E   00C8           03021         movwf Satir#4
+  0000065F            03022 F1_000430 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = "X"
+065F   3058           03023         movlw 88
+0660   00C9           03024         movwf Satir#5
+                      03025         f@jump BC@LL62
+0664                  03026 BC@LL61
+  00000664            03027 F1_000431 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  00000664            03028 F1_000432 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[4] = " "
+0664   3020           03029         movlw 32
+0665   00C8           03030         movwf Satir#4
+  00000666            03031 F1_000433 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[5] = " "
+0666   00C9           03032         movwf Satir#5
+  00000667            03033 F1_000434 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+0667                  03034 BC@LL62
+  00000667            03035 F1_000435 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[6] = " "
+0667   3020           03036         movlw 32
+0668   00CA           03037         movwf Satir#6
+  00000669            03038 F1_000436 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[7] = " "
+0669   00CB           03039         movwf Satir#7
+  0000066A            03040 F1_000437 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[8] = " "
+066A   00CC           03041         movwf Satir#8
+  0000066B            03042 F1_000438 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[11] = 1 THEN
+066B   085F           03043         movf Degerler#11,W
+066C   00A7           03044         movwf PBP#VAR0
+066D   3001           03045         movlw 1
+066E   0227           03046         subwf PBP#VAR0,W
+                      03047         set@page BC@LL64
+0671   1D03           03048         btfss STATUS,2
+0672   2E7A           03049         goto BC@LL64
+  00000673            03050 F1_000439 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[9] = "<"
+0673   303C           03051         movlw 60
+0674   00CD           03052         movwf Satir#9
+  00000675            03053 F1_000440 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[10] = ">"
+0675   303E           03054         movlw 62
+0676   00CE           03055         movwf Satir#10
+                      03056         f@jump BC@LL65
+067A                  03057 BC@LL64
+  0000067A            03058 F1_000441 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  0000067A            03059 F1_000442 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[9] = " "
+067A   3020           03060         movlw 32
+067B   00CD           03061         movwf Satir#9
+  0000067C            03062 F1_000443 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[10] = " "
+067C   00CE           03063         movwf Satir#10
+  0000067D            03064 F1_000444 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+067D                  03065 BC@LL65
+  0000067D            03066 F1_000445 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[11] = " "
+067D   3020           03067         movlw 32
+067E   00CF           03068         movwf Satir#11
+  0000067F            03069 F1_000446 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[45] = 1 THEN
+067F   1683           03070         bsf STATUS,5
+  00000001            03071 ram_bank = 1
+0680   0825           03072         movf Degerler#45,W
+0681   1283           03073         bcf STATUS,5
+  00000000            03074 ram_bank = 0
+0682   00A7           03075         movwf PBP#VAR0
+0683   3001           03076         movlw 1
+0684   0227           03077         subwf PBP#VAR0,W
+                      03078         set@page BC@LL67
+0687   1D03           03079         btfss STATUS,2
+0688   2E8E           03080         goto BC@LL67
+  00000689            03081 F1_000447 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[12] = "N"
+0689   306E           03082         movlw 110
+068A   00D0           03083         movwf Satir#12
+                      03084         f@jump BC@LL68
+068E                  03085 BC@LL67
+  0000068E            03086 F1_000448 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  0000068E            03087 F1_000449 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[12] = " "
+068E   3020           03088         movlw 32
+068F   00D0           03089         movwf Satir#12
+  00000690            03090 F1_000450 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+0690                  03091 BC@LL68
+  00000690            03092 F1_000452 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if Degerler[12] = 1 THEN
+0690   0860           03093         movf Degerler#12,W
+0691   00A7           03094         movwf PBP#VAR0
+0692   3001           03095         movlw 1
+0693   0227           03096         subwf PBP#VAR0,W
+                      03097         set@page BC@LL70
+0696   1D03           03098         btfss STATUS,2
+0697   2EA1           03099         goto BC@LL70
+  00000698            03100 F1_000453 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[13] = "U"
+0698   3055           03101         movlw 85
+0699   00D1           03102         movwf Satir#13
+  0000069A            03103 F1_000454 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[14] = "S"
+069A   3053           03104         movlw 83
+069B   00D2           03105         movwf Satir#14
+  0000069C            03106 F1_000455 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[15] = "B"
+069C   3042           03107         movlw 66
+069D   00D3           03108         movwf Satir#15
+                      03109         f@jump BC@LL71
+06A1                  03110 BC@LL70
+  000006A1            03111 F1_000456 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  000006A1            03112 F1_000457 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[13] = "L"
+06A1   304C           03113         movlw 76
+06A2   00D1           03114         movwf Satir#13
+  000006A3            03115 F1_000458 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[14] = "S"
+06A3   3053           03116         movlw 83
+06A4   00D2           03117         movwf Satir#14
+  000006A5            03118 F1_000459 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] Satir[15] = "B"
+06A5   3042           03119         movlw 66
+06A6   00D3           03120         movwf Satir#15
+  000006A7            03121 F1_000460 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+06A7                  03122 BC@LL71
+  000006A7            03123 F1_000463 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB SatirGonder
+                      03124         f@call SatirGonder
+  000006AA            03125 F1_000464 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYMS 10
+06AA   300A           03126         movlw 10
+                      03127         f@call __DELAY_MS_
+  000006AD            03128 F1_000468 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] goto Dongu
+                      03129         f@jump Dongu
+06AF                  03130 CalcValue
+  000006AF            03131 F1_000473 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DecValue = Segments[0]+Segments[1]*2+Segments[2]*4+Segments[3]*8+Segments[4]*16+Segments[5]*32+Segments[6]*64
+06AF   1683           03132         bsf STATUS,5
+  00000001            03133 ram_bank = 1
+06B0   0853           03134         movf Segments#0,W
+06B1   1283           03135         bcf STATUS,5
+  00000000            03136 ram_bank = 0
+06B2   00A7           03137         movwf PBP#VAR0
+06B3   01BB           03138         clrf PP7H
+06B4   0827           03139         movf PBP#VAR0,W
+06B5   00BA           03140         movwf PP7
+06B6   1683           03141         bsf STATUS,5
+  00000001            03142 ram_bank = 1
+06B7   0854           03143         movf Segments#1,W
+06B8   1283           03144         bcf STATUS,5
+  00000000            03145 ram_bank = 0
+06B9   00A8           03146         movwf PBP#VAR1
+06BA   01BD           03147         clrf PP8H
+06BB   0828           03148         movf PBP#VAR1,W
+06BC   00BC           03149         movwf PP8
+06BD   1003           03150         bcf STATUS,0
+06BE   0DBC           03151         rlf PP8,F
+06BF   0DBD           03152         rlf PP8H,F
+06C0   083C           03153         movf PP8,W
+06C1   07BA           03154         addwf PP7,F
+06C2   083D           03155         movf PP8H,W
+06C3   1803           03156         btfsc STATUS,0
+06C4   3E01           03157         addlw 1
+06C5   07BB           03158         addwf PP7H,F
+06C6   1683           03159         bsf STATUS,5
+  00000001            03160 ram_bank = 1
+06C7   0855           03161         movf Segments#2,W
+06C8   1283           03162         bcf STATUS,5
+  00000000            03163 ram_bank = 0
+06C9   00A9           03164         movwf PBP#VAR2
+06CA   01BD           03165         clrf PP8H
+06CB   0829           03166         movf PBP#VAR2,W
+06CC   00BC           03167         movwf PP8
+06CD   0DBC           03168         rlf PP8,F
+06CE   0DBD           03169         rlf PP8H,F
+06CF   0DBC           03170         rlf PP8,F
+06D0   0DBD           03171         rlf PP8H,F
+06D1   30FC           03172         movlw 252
+06D2   05BC           03173         andwf PP8,F
+06D3   083C           03174         movf PP8,W
+06D4   07BA           03175         addwf PP7,F
+06D5   083D           03176         movf PP8H,W
+06D6   1803           03177         btfsc STATUS,0
+06D7   3E01           03178         addlw 1
+06D8   07BB           03179         addwf PP7H,F
+06D9   1683           03180         bsf STATUS,5
+  00000001            03181 ram_bank = 1
+06DA   0856           03182         movf Segments#3,W
+06DB   1283           03183         bcf STATUS,5
+  00000000            03184 ram_bank = 0
+06DC   00AA           03185         movwf PBP#VAR3
+06DD   01BD           03186         clrf PP8H
+06DE   082A           03187         movf PBP#VAR3,W
+06DF   00BC           03188         movwf PP8
+06E0   3003           03189         movlw 3
+06E1   00AE           03190         movwf PP0
+06E2                  03191 M@LB2
+06E2   1003           03192         bcf STATUS,0
+06E3   0DBC           03193         rlf PP8,F
+06E4   0DBD           03194         rlf PP8H,F
+06E5   03AE           03195         decf PP0,F
+                      03196         set@page M@LB2
+06E8   1D03           03197         btfss STATUS,2
+06E9   2EE2           03198         goto M@LB2
+06EA   083C           03199         movf PP8,W
+06EB   07BA           03200         addwf PP7,F
+06EC   083D           03201         movf PP8H,W
+06ED   1803           03202         btfsc STATUS,0
+06EE   3E01           03203         addlw 1
+06EF   07BB           03204         addwf PP7H,F
+06F0   1683           03205         bsf STATUS,5
+  00000001            03206 ram_bank = 1
+06F1   0857           03207         movf Segments#4,W
+06F2   1283           03208         bcf STATUS,5
+  00000000            03209 ram_bank = 0
+06F3   00AB           03210         movwf PBP#VAR4
+06F4   01BD           03211         clrf PP8H
+06F5   082B           03212         movf PBP#VAR4,W
+06F6   00BC           03213         movwf PP8
+06F7   3004           03214         movlw 4
+06F8   00AE           03215         movwf PP0
+06F9                  03216 M@LB3
+06F9   1003           03217         bcf STATUS,0
+06FA   0DBC           03218         rlf PP8,F
+06FB   0DBD           03219         rlf PP8H,F
+06FC   03AE           03220         decf PP0,F
+                      03221         set@page M@LB3
+06FF   1D03           03222         btfss STATUS,2
+0700   2EF9           03223         goto M@LB3
+0701   083C           03224         movf PP8,W
+0702   07BA           03225         addwf PP7,F
+0703   083D           03226         movf PP8H,W
+0704   1803           03227         btfsc STATUS,0
+0705   3E01           03228         addlw 1
+0706   07BB           03229         addwf PP7H,F
+0707   1683           03230         bsf STATUS,5
+  00000001            03231 ram_bank = 1
+0708   0858           03232         movf Segments#5,W
+0709   1283           03233         bcf STATUS,5
+  00000000            03234 ram_bank = 0
+070A   00AC           03235         movwf PBP#VAR5
+070B   01BD           03236         clrf PP8H
+070C   082C           03237         movf PBP#VAR5,W
+070D   00BC           03238         movwf PP8
+070E   3005           03239         movlw 5
+070F   00AE           03240         movwf PP0
+0710                  03241 M@LB4
+0710   1003           03242         bcf STATUS,0
+0711   0DBC           03243         rlf PP8,F
+0712   0DBD           03244         rlf PP8H,F
+0713   03AE           03245         decf PP0,F
+                      03246         set@page M@LB4
+0716   1D03           03247         btfss STATUS,2
+0717   2F10           03248         goto M@LB4
+0718   083C           03249         movf PP8,W
+0719   07BA           03250         addwf PP7,F
+071A   083D           03251         movf PP8H,W
+071B   1803           03252         btfsc STATUS,0
+071C   3E01           03253         addlw 1
+071D   07BB           03254         addwf PP7H,F
+071E   1683           03255         bsf STATUS,5
+  00000001            03256 ram_bank = 1
+071F   0859           03257         movf Segments#6,W
+0720   1283           03258         bcf STATUS,5
+  00000000            03259 ram_bank = 0
+0721   00AD           03260         movwf PBP#VAR6
+0722   01BD           03261         clrf PP8H
+0723   082D           03262         movf PBP#VAR6,W
+0724   00BC           03263         movwf PP8
+0725   3006           03264         movlw 6
+0726   00AE           03265         movwf PP0
+0727                  03266 M@LB5
+0727   1003           03267         bcf STATUS,0
+0728   0DBC           03268         rlf PP8,F
+0729   0DBD           03269         rlf PP8H,F
+072A   03AE           03270         decf PP0,F
+                      03271         set@page M@LB5
+072D   1D03           03272         btfss STATUS,2
+072E   2F27           03273         goto M@LB5
+072F   083A           03274         movf PP7,W
+0730   073C           03275         addwf PP8,W
+0731   1683           03276         bsf STATUS,5
+  00000001            03277 ram_bank = 1
+0732   00DA           03278         movwf DecValue
+  00000733            03279 F1_000474 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] ResValue = "-"
+0733   302D           03280         movlw 45
+0734   00DB           03281         movwf ResValue
+  00000735            03282 F1_000475 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 0   THEN ResValue = " "
+0735   08DA           03283         movf DecValue,F
+                      03284         set@page BC@LL73
+0738   1283           03285         bcf STATUS,5
+  00000000            03286 ram_bank = 0
+0739   1D03           03287         btfss STATUS,2
+073A   2F3E           03288         goto BC@LL73
+073B   3020           03289         movlw 32
+073C   1683           03290         bsf STATUS,5
+  00000001            03291 ram_bank = 1
+073D   00DB           03292         movwf ResValue
+073E                  03293 BC@LL73
+073E   1283           03294         bcf STATUS,5
+  00000000            03295 ram_bank = 0
+  0000073F            03296 F1_000476 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 63  THEN ResValue = "0"
+073F   303F           03297         movlw 63
+0740   1683           03298         bsf STATUS,5
+  00000001            03299 ram_bank = 1
+0741   025A           03300         subwf DecValue,W
+                      03301         set@page BC@LL75
+0744   1283           03302         bcf STATUS,5
+  00000000            03303 ram_bank = 0
+0745   1D03           03304         btfss STATUS,2
+0746   2F4A           03305         goto BC@LL75
+0747   3030           03306         movlw 48
+0748   1683           03307         bsf STATUS,5
+  00000001            03308 ram_bank = 1
+0749   00DB           03309         movwf ResValue
+074A                  03310 BC@LL75
+074A   1283           03311         bcf STATUS,5
+  00000000            03312 ram_bank = 0
+  0000074B            03313 F1_000477 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 6   THEN ResValue = "1"
+074B   3006           03314         movlw 6
+074C   1683           03315         bsf STATUS,5
+  00000001            03316 ram_bank = 1
+074D   025A           03317         subwf DecValue,W
+                      03318         set@page BC@LL77
+0750   1283           03319         bcf STATUS,5
   00000000            03320 ram_bank = 0
-076A   1D03           03321         btfss STATUS,2
-076B   2F6F           03322         goto BC@LL73
-076C   3020           03323         movlw 32
-076D   1683           03324         bsf STATUS,5
+0751   1D03           03321         btfss STATUS,2
+0752   2F56           03322         goto BC@LL77
+0753   3031           03323         movlw 49
+0754   1683           03324         bsf STATUS,5
   00000001            03325 ram_bank = 1
-076E   00DB           03326         movwf ResValue
-076F                  03327 BC@LL73
-076F   1283           03328         bcf STATUS,5
+0755   00DB           03326         movwf ResValue
+0756                  03327 BC@LL77
+0756   1283           03328         bcf STATUS,5
   00000000            03329 ram_bank = 0
-  00000770            03330 F1_000477 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 63  THEN ResValue = "0"
-0770   303F           03331         movlw 63
-0771   1683           03332         bsf STATUS,5
+  00000757            03330 F1_000478 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 91  THEN ResValue = "2"
+0757   305B           03331         movlw 91
+0758   1683           03332         bsf STATUS,5
   00000001            03333 ram_bank = 1
-0772   025A           03334         subwf DecValue,W
-                      03335         set@page BC@LL75
-0775   1283           03336         bcf STATUS,5
+0759   025A           03334         subwf DecValue,W
+                      03335         set@page BC@LL79
+075C   1283           03336         bcf STATUS,5
   00000000            03337 ram_bank = 0
-0776   1D03           03338         btfss STATUS,2
-0777   2F7B           03339         goto BC@LL75
-0778   3030           03340         movlw 48
-0779   1683           03341         bsf STATUS,5
+075D   1D03           03338         btfss STATUS,2
+075E   2F62           03339         goto BC@LL79
+075F   3032           03340         movlw 50
+0760   1683           03341         bsf STATUS,5
   00000001            03342 ram_bank = 1
-077A   00DB           03343         movwf ResValue
-077B                  03344 BC@LL75
-077B   1283           03345         bcf STATUS,5
+0761   00DB           03343         movwf ResValue
+0762                  03344 BC@LL79
+0762   1283           03345         bcf STATUS,5
   00000000            03346 ram_bank = 0
-  0000077C            03347 F1_000478 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 6   THEN ResValue = "1"
-077C   3006           03348         movlw 6
-077D   1683           03349         bsf STATUS,5
+  00000763            03347 F1_000479 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 79  THEN ResValue = "3"
+0763   304F           03348         movlw 79
+0764   1683           03349         bsf STATUS,5
   00000001            03350 ram_bank = 1
-077E   025A           03351         subwf DecValue,W
-                      03352         set@page BC@LL77
-0781   1283           03353         bcf STATUS,5
+0765   025A           03351         subwf DecValue,W
+                      03352         set@page BC@LL81
+0768   1283           03353         bcf STATUS,5
   00000000            03354 ram_bank = 0
-0782   1D03           03355         btfss STATUS,2
-0783   2F87           03356         goto BC@LL77
-0784   3031           03357         movlw 49
-0785   1683           03358         bsf STATUS,5
+0769   1D03           03355         btfss STATUS,2
+076A   2F6E           03356         goto BC@LL81
+076B   3033           03357         movlw 51
+076C   1683           03358         bsf STATUS,5
   00000001            03359 ram_bank = 1
-0786   00DB           03360         movwf ResValue
-0787                  03361 BC@LL77
-0787   1283           03362         bcf STATUS,5
+076D   00DB           03360         movwf ResValue
+076E                  03361 BC@LL81
+076E   1283           03362         bcf STATUS,5
   00000000            03363 ram_bank = 0
-  00000788            03364 F1_000479 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 91  THEN ResValue = "2"
-0788   305B           03365         movlw 91
-0789   1683           03366         bsf STATUS,5
+  0000076F            03364 F1_000480 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 102 THEN ResValue = "4"
+076F   3066           03365         movlw 102
+0770   1683           03366         bsf STATUS,5
   00000001            03367 ram_bank = 1
-078A   025A           03368         subwf DecValue,W
-                      03369         set@page BC@LL79
-078D   1283           03370         bcf STATUS,5
+0771   025A           03368         subwf DecValue,W
+                      03369         set@page BC@LL83
+0774   1283           03370         bcf STATUS,5
   00000000            03371 ram_bank = 0
-078E   1D03           03372         btfss STATUS,2
-078F   2F93           03373         goto BC@LL79
-0790   3032           03374         movlw 50
-0791   1683           03375         bsf STATUS,5
+0775   1D03           03372         btfss STATUS,2
+0776   2F7A           03373         goto BC@LL83
+0777   3034           03374         movlw 52
+0778   1683           03375         bsf STATUS,5
   00000001            03376 ram_bank = 1
-0792   00DB           03377         movwf ResValue
-0793                  03378 BC@LL79
-0793   1283           03379         bcf STATUS,5
+0779   00DB           03377         movwf ResValue
+077A                  03378 BC@LL83
+077A   1283           03379         bcf STATUS,5
   00000000            03380 ram_bank = 0
-  00000794            03381 F1_000480 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 79  THEN ResValue = "3"
-0794   304F           03382         movlw 79
-0795   1683           03383         bsf STATUS,5
+  0000077B            03381 F1_000481 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 109 THEN ResValue = "5"
+077B   306D           03382         movlw 109
+077C   1683           03383         bsf STATUS,5
   00000001            03384 ram_bank = 1
-0796   025A           03385         subwf DecValue,W
-                      03386         set@page BC@LL81
-0799   1283           03387         bcf STATUS,5
+077D   025A           03385         subwf DecValue,W
+                      03386         set@page BC@LL85
+0780   1283           03387         bcf STATUS,5
   00000000            03388 ram_bank = 0
-079A   1D03           03389         btfss STATUS,2
-079B   2F9F           03390         goto BC@LL81
-079C   3033           03391         movlw 51
-079D   1683           03392         bsf STATUS,5
+0781   1D03           03389         btfss STATUS,2
+0782   2F86           03390         goto BC@LL85
+0783   3035           03391         movlw 53
+0784   1683           03392         bsf STATUS,5
   00000001            03393 ram_bank = 1
-079E   00DB           03394         movwf ResValue
-079F                  03395 BC@LL81
-079F   1283           03396         bcf STATUS,5
+0785   00DB           03394         movwf ResValue
+0786                  03395 BC@LL85
+0786   1283           03396         bcf STATUS,5
   00000000            03397 ram_bank = 0
-  000007A0            03398 F1_000481 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 102 THEN ResValue = "4"
-07A0   3066           03399         movlw 102
-07A1   1683           03400         bsf STATUS,5
+  00000787            03398 F1_000482 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 125 THEN ResValue = "6"
+0787   307D           03399         movlw 125
+0788   1683           03400         bsf STATUS,5
   00000001            03401 ram_bank = 1
-07A2   025A           03402         subwf DecValue,W
-                      03403         set@page BC@LL83
-07A5   1283           03404         bcf STATUS,5
+0789   025A           03402         subwf DecValue,W
+                      03403         set@page BC@LL87
+078C   1283           03404         bcf STATUS,5
   00000000            03405 ram_bank = 0
-07A6   1D03           03406         btfss STATUS,2
-07A7   2FAB           03407         goto BC@LL83
-07A8   3034           03408         movlw 52
-07A9   1683           03409         bsf STATUS,5
+078D   1D03           03406         btfss STATUS,2
+078E   2F92           03407         goto BC@LL87
+078F   3036           03408         movlw 54
+0790   1683           03409         bsf STATUS,5
   00000001            03410 ram_bank = 1
-07AA   00DB           03411         movwf ResValue
-07AB                  03412 BC@LL83
-07AB   1283           03413         bcf STATUS,5
+0791   00DB           03411         movwf ResValue
+0792                  03412 BC@LL87
+0792   1283           03413         bcf STATUS,5
   00000000            03414 ram_bank = 0
-  000007AC            03415 F1_000482 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 109 THEN ResValue = "5"
-07AC   306D           03416         movlw 109
-07AD   1683           03417         bsf STATUS,5
+  00000793            03415 F1_000483 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 7   THEN ResValue = "7"
+0793   3007           03416         movlw 7
+0794   1683           03417         bsf STATUS,5
   00000001            03418 ram_bank = 1
-07AE   025A           03419         subwf DecValue,W
-                      03420         set@page BC@LL85
-07B1   1283           03421         bcf STATUS,5
+0795   025A           03419         subwf DecValue,W
+                      03420         set@page BC@LL89
+0798   1283           03421         bcf STATUS,5
   00000000            03422 ram_bank = 0
-07B2   1D03           03423         btfss STATUS,2
-07B3   2FB7           03424         goto BC@LL85
-07B4   3035           03425         movlw 53
-07B5   1683           03426         bsf STATUS,5
+0799   1D03           03423         btfss STATUS,2
+079A   2F9E           03424         goto BC@LL89
+079B   3037           03425         movlw 55
+079C   1683           03426         bsf STATUS,5
   00000001            03427 ram_bank = 1
-07B6   00DB           03428         movwf ResValue
-07B7                  03429 BC@LL85
-07B7   1283           03430         bcf STATUS,5
+079D   00DB           03428         movwf ResValue
+079E                  03429 BC@LL89
+079E   1283           03430         bcf STATUS,5
   00000000            03431 ram_bank = 0
-  000007B8            03432 F1_000483 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 125 THEN ResValue = "6"
-07B8   307D           03433         movlw 125
-07B9   1683           03434         bsf STATUS,5
+  0000079F            03432 F1_000484 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 127 THEN ResValue = "8"
+079F   307F           03433         movlw 127
+07A0   1683           03434         bsf STATUS,5
   00000001            03435 ram_bank = 1
-07BA   025A           03436         subwf DecValue,W
-                      03437         set@page BC@LL87
-07BD   1283           03438         bcf STATUS,5
+07A1   025A           03436         subwf DecValue,W
+                      03437         set@page BC@LL91
+07A4   1283           03438         bcf STATUS,5
   00000000            03439 ram_bank = 0
-07BE   1D03           03440         btfss STATUS,2
-07BF   2FC3           03441         goto BC@LL87
-07C0   3036           03442         movlw 54
-07C1   1683           03443         bsf STATUS,5
+07A5   1D03           03440         btfss STATUS,2
+07A6   2FAA           03441         goto BC@LL91
+07A7   3038           03442         movlw 56
+07A8   1683           03443         bsf STATUS,5
   00000001            03444 ram_bank = 1
-07C2   00DB           03445         movwf ResValue
-07C3                  03446 BC@LL87
-07C3   1283           03447         bcf STATUS,5
+07A9   00DB           03445         movwf ResValue
+07AA                  03446 BC@LL91
+07AA   1283           03447         bcf STATUS,5
   00000000            03448 ram_bank = 0
-  000007C4            03449 F1_000484 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 7   THEN ResValue = "7"
-07C4   3007           03450         movlw 7
-07C5   1683           03451         bsf STATUS,5
+  000007AB            03449 F1_000485 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 111 THEN ResValue = "9"
+07AB   306F           03450         movlw 111
+07AC   1683           03451         bsf STATUS,5
   00000001            03452 ram_bank = 1
-07C6   025A           03453         subwf DecValue,W
-                      03454         set@page BC@LL89
-07C9   1283           03455         bcf STATUS,5
+07AD   025A           03453         subwf DecValue,W
+                      03454         set@page BC@LL93
+07B0   1283           03455         bcf STATUS,5
   00000000            03456 ram_bank = 0
-07CA   1D03           03457         btfss STATUS,2
-07CB   2FCF           03458         goto BC@LL89
-07CC   3037           03459         movlw 55
-07CD   1683           03460         bsf STATUS,5
+07B1   1D03           03457         btfss STATUS,2
+07B2   2FB6           03458         goto BC@LL93
+07B3   3039           03459         movlw 57
+07B4   1683           03460         bsf STATUS,5
   00000001            03461 ram_bank = 1
-07CE   00DB           03462         movwf ResValue
-07CF                  03463 BC@LL89
-07CF   1283           03464         bcf STATUS,5
+07B5   00DB           03462         movwf ResValue
+07B6                  03463 BC@LL93
+07B6   1283           03464         bcf STATUS,5
   00000000            03465 ram_bank = 0
-  000007D0            03466 F1_000485 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 127 THEN ResValue = "8"
-07D0   307F           03467         movlw 127
-07D1   1683           03468         bsf STATUS,5
+  000007B7            03466 F1_000486 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 120 THEN ResValue = "U"
+07B7   3078           03467         movlw 120
+07B8   1683           03468         bsf STATUS,5
   00000001            03469 ram_bank = 1
-07D2   025A           03470         subwf DecValue,W
-                      03471         set@page BC@LL91
-07D5   1283           03472         bcf STATUS,5
+07B9   025A           03470         subwf DecValue,W
+                      03471         set@page BC@LL95
+07BC   1283           03472         bcf STATUS,5
   00000000            03473 ram_bank = 0
-07D6   1D03           03474         btfss STATUS,2
-07D7   2FDB           03475         goto BC@LL91
-07D8   3038           03476         movlw 56
-07D9   1683           03477         bsf STATUS,5
+07BD   1D03           03474         btfss STATUS,2
+07BE   2FC2           03475         goto BC@LL95
+07BF   3055           03476         movlw 85
+07C0   1683           03477         bsf STATUS,5
   00000001            03478 ram_bank = 1
-07DA   00DB           03479         movwf ResValue
-07DB                  03480 BC@LL91
-07DB   1283           03481         bcf STATUS,5
+07C1   00DB           03479         movwf ResValue
+07C2                  03480 BC@LL95
+07C2   1283           03481         bcf STATUS,5
   00000000            03482 ram_bank = 0
-  000007DC            03483 F1_000486 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 111 THEN ResValue = "9"
-07DC   306F           03484         movlw 111
-07DD   1683           03485         bsf STATUS,5
+  000007C3            03483 F1_000487 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 28  THEN ResValue = "U"
+07C3   301C           03484         movlw 28
+07C4   1683           03485         bsf STATUS,5
   00000001            03486 ram_bank = 1
-07DE   025A           03487         subwf DecValue,W
-                      03488         set@page BC@LL93
-07E1   1283           03489         bcf STATUS,5
+07C5   025A           03487         subwf DecValue,W
+                      03488         set@page BC@LL97
+07C8   1283           03489         bcf STATUS,5
   00000000            03490 ram_bank = 0
-07E2   1D03           03491         btfss STATUS,2
-07E3   2FE7           03492         goto BC@LL93
-07E4   3039           03493         movlw 57
-07E5   1683           03494         bsf STATUS,5
+07C9   1D03           03491         btfss STATUS,2
+07CA   2FCE           03492         goto BC@LL97
+07CB   3055           03493         movlw 85
+07CC   1683           03494         bsf STATUS,5
   00000001            03495 ram_bank = 1
-07E6   00DB           03496         movwf ResValue
-07E7                  03497 BC@LL93
-07E7   1283           03498         bcf STATUS,5
+07CD   00DB           03496         movwf ResValue
+07CE                  03497 BC@LL97
+07CE   1283           03498         bcf STATUS,5
   00000000            03499 ram_bank = 0
-  000007E8            03500 F1_000487 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 120 THEN ResValue = "U"
-07E8   3078           03501         movlw 120
-07E9   1683           03502         bsf STATUS,5
+  000007CF            03500 F1_000488 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 84  THEN ResValue = "N"
+07CF   3054           03501         movlw 84
+07D0   1683           03502         bsf STATUS,5
   00000001            03503 ram_bank = 1
-07EA   025A           03504         subwf DecValue,W
-                      03505         set@page BC@LL95
-07ED   1283           03506         bcf STATUS,5
+07D1   025A           03504         subwf DecValue,W
+                      03505         set@page BC@LL99
+07D4   1283           03506         bcf STATUS,5
   00000000            03507 ram_bank = 0
-07EE   1D03           03508         btfss STATUS,2
-07EF   2FF3           03509         goto BC@LL95
-07F0   3055           03510         movlw 85
-07F1   1683           03511         bsf STATUS,5
+07D5   1D03           03508         btfss STATUS,2
+07D6   2FDA           03509         goto BC@LL99
+07D7   306E           03510         movlw 110
+07D8   1683           03511         bsf STATUS,5
   00000001            03512 ram_bank = 1
-07F2   00DB           03513         movwf ResValue
-07F3                  03514 BC@LL95
-07F3   1283           03515         bcf STATUS,5
+07D9   00DB           03513         movwf ResValue
+07DA                  03514 BC@LL99
+07DA   1283           03515         bcf STATUS,5
   00000000            03516 ram_bank = 0
-  000007F4            03517 F1_000488 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 28  THEN ResValue = "U"
-07F4   301C           03518         movlw 28
-07F5   1683           03519         bsf STATUS,5
+  000007DB            03517 F1_000489 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 88  THEN ResValue = "E"
+07DB   3058           03518         movlw 88
+07DC   1683           03519         bsf STATUS,5
   00000001            03520 ram_bank = 1
-07F6   025A           03521         subwf DecValue,W
-                      03522         set@page BC@LL97
-07F9   1283           03523         bcf STATUS,5
+07DD   025A           03521         subwf DecValue,W
+                      03522         set@page BC@LL101
+07E0   1283           03523         bcf STATUS,5
   00000000            03524 ram_bank = 0
-07FA   1D03           03525         btfss STATUS,2
-07FB   2FFF           03526         goto BC@LL97
-07FC   3055           03527         movlw 85
-07FD   1683           03528         bsf STATUS,5
+07E1   1D03           03525         btfss STATUS,2
+07E2   2FE6           03526         goto BC@LL101
+07E3   3065           03527         movlw 101
+07E4   1683           03528         bsf STATUS,5
   00000001            03529 ram_bank = 1
-07FE   00DB           03530         movwf ResValue
-07FF                  03531 BC@LL97
-07FF   1283           03532         bcf STATUS,5
+07E5   00DB           03530         movwf ResValue
+07E6                  03531 BC@LL101
+07E6   1283           03532         bcf STATUS,5
   00000000            03533 ram_bank = 0
-  00000800            03534 F1_000489 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 84  THEN ResValue = "N"
-0800   3054           03535         movlw 84
-0801   1683           03536         bsf STATUS,5
-  00000001            03537 ram_bank = 1
-0802   025A           03538         subwf DecValue,W
-                      03539         set@page BC@LL99
-0805   1283           03540         bcf STATUS,5
-  00000000            03541 ram_bank = 0
-0806   1D03           03542         btfss STATUS,2
-0807   280B           03543         goto BC@LL99
-0808   306E           03544         movlw 110
-0809   1683           03545         bsf STATUS,5
-  00000001            03546 ram_bank = 1
-080A   00DB           03547         movwf ResValue
-080B                  03548 BC@LL99
-080B   1283           03549         bcf STATUS,5
-  00000000            03550 ram_bank = 0
-  0000080C            03551 F1_000490 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DecValue = 88  THEN ResValue = "E"
-080C   3058           03552         movlw 88
-080D   1683           03553         bsf STATUS,5
-  00000001            03554 ram_bank = 1
-080E   025A           03555         subwf DecValue,W
-                      03556         set@page BC@LL101
-0811   1283           03557         bcf STATUS,5
-  00000000            03558 ram_bank = 0
-0812   1D03           03559         btfss STATUS,2
-0813   2817           03560         goto BC@LL101
-0814   3065           03561         movlw 101
-0815   1683           03562         bsf STATUS,5
-  00000001            03563 ram_bank = 1
-0816   00DB           03564         movwf ResValue
-0817                  03565 BC@LL101
-0817   1283           03566         bcf STATUS,5
-  00000000            03567 ram_bank = 0
-  00000818            03568 F1_000506 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
-0818   0008           03569         return
-0819                  03570 KomutGonder
-  00000819            03571 F1_000510 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SDA
-0819   1683           03572         bsf STATUS,5
-  00000001            03573 ram_bank = 1
-081A   1207           03574         bcf TRISC,4
-081B   1283           03575         bcf STATUS,5
-  00000000            03576 ram_bank = 0
-081C   1207           03577         bcf PORTC,4
-  0000081D            03578 F1_000511 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
-081D   3008           03579         movlw 8
-081E   00AE           03580         movwf PP0
-                      03581         set@page ID@LB102
-0821                  03582 ID@LB102
-0821   0BAE           03583         decfsz PP0,F
-0822   2821           03584         goto ID@LB102
-  00000823            03585 F1_000512 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
-0823   1683           03586         bsf STATUS,5
-  00000001            03587 ram_bank = 1
-0824   1187           03588         bcf TRISC,3
-0825   1283           03589         bcf STATUS,5
+  000007E7            03534 F1_000505 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
+07E7   0008           03535         return
+07E8                  03536 KomutGonder
+  000007E8            03537 F1_000509 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SDA
+07E8   1683           03538         bsf STATUS,5
+  00000001            03539 ram_bank = 1
+07E9   1207           03540         bcf TRISC,4
+07EA   1283           03541         bcf STATUS,5
+  00000000            03542 ram_bank = 0
+07EB   1207           03543         bcf PORTC,4
+  000007EC            03544 F1_000510 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+07EC   3008           03545         movlw 8
+07ED   00AE           03546         movwf PP0
+                      03547         set@page ID@LB102
+07F0                  03548 ID@LB102
+07F0   0BAE           03549         decfsz PP0,F
+07F1   2FF0           03550         goto ID@LB102
+  000007F2            03551 F1_000511 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
+07F2   1683           03552         bsf STATUS,5
+  00000001            03553 ram_bank = 1
+07F3   1187           03554         bcf TRISC,3
+07F4   1283           03555         bcf STATUS,5
+  00000000            03556 ram_bank = 0
+07F5   1187           03557         bcf PORTC,3
+  000007F6            03558 F1_000512 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+07F6   3008           03559         movlw 8
+07F7   00AE           03560         movwf PP0
+                      03561         set@page ID@LB103
+07FA                  03562 ID@LB103
+07FA   0BAE           03563         decfsz PP0,F
+07FB   2FFA           03564         goto ID@LB103
+  000007FC            03565 F1_000514 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $78
+07FC   3078           03566         movlw 120
+07FD   1683           03567         bsf STATUS,5
+  00000001            03568 ram_bank = 1
+07FE   00E6           03569         movwf DATAm
+  000007FF            03570 F1_000515 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
+07FF   1283           03571         bcf STATUS,5
+  00000000            03572 ram_bank = 0
+                      03573         f@call Gonder
+  00000803            03574 F1_000516 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $80
+0803   3080           03575         movlw 128
+0804   1683           03576         bsf STATUS,5
+  00000001            03577 ram_bank = 1
+0805   00E6           03578         movwf DATAm
+  00000806            03579 F1_000517 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
+0806   1283           03580         bcf STATUS,5
+  00000000            03581 ram_bank = 0
+                      03582         f@call Gonder
+  0000080A            03583 F1_000518 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = Cmd
+080A   1683           03584         bsf STATUS,5
+  00000001            03585 ram_bank = 1
+080B   0864           03586         movf Cmd,W
+080C   00E6           03587         movwf DATAm
+  0000080D            03588 F1_000519 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
+080D   1283           03589         bcf STATUS,5
   00000000            03590 ram_bank = 0
-0826   1187           03591         bcf PORTC,3
-  00000827            03592 F1_000513 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
-0827   3008           03593         movlw 8
-0828   00AE           03594         movwf PP0
-                      03595         set@page ID@LB103
-082B                  03596 ID@LB103
-082B   0BAE           03597         decfsz PP0,F
-082C   282B           03598         goto ID@LB103
-  0000082D            03599 F1_000515 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $78
-082D   3078           03600         movlw 120
-082E   1683           03601         bsf STATUS,5
-  00000001            03602 ram_bank = 1
-082F   00E6           03603         movwf DATAm
-  00000830            03604 F1_000516 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
-0830   1283           03605         bcf STATUS,5
-  00000000            03606 ram_bank = 0
-                      03607         f@call Gonder
-  00000834            03608 F1_000517 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $80
-0834   3080           03609         movlw 128
-0835   1683           03610         bsf STATUS,5
-  00000001            03611 ram_bank = 1
-0836   00E6           03612         movwf DATAm
-  00000837            03613 F1_000518 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
-0837   1283           03614         bcf STATUS,5
-  00000000            03615 ram_bank = 0
-                      03616         f@call Gonder
-  0000083B            03617 F1_000519 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = Cmd
-083B   1683           03618         bsf STATUS,5
-  00000001            03619 ram_bank = 1
-083C   0864           03620         movf Cmd,W
-083D   00E6           03621         movwf DATAm
-  0000083E            03622 F1_000520 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
-083E   1283           03623         bcf STATUS,5
-  00000000            03624 ram_bank = 0
-                      03625         f@call Gonder
-  00000842            03626 F1_000523 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
-0842   1683           03627         bsf STATUS,5
+                      03591         f@call Gonder
+  00000811            03592 F1_000522 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
+0811   1683           03593         bsf STATUS,5
+  00000001            03594 ram_bank = 1
+0812   1187           03595         bcf TRISC,3
+0813   1283           03596         bcf STATUS,5
+  00000000            03597 ram_bank = 0
+0814   1587           03598         bsf PORTC,3
+  00000815            03599 F1_000523 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+0815   0000           03600         nop
+0816   0000           03601         nop
+  00000817            03602 F1_000524 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SDA
+0817   1683           03603         bsf STATUS,5
+  00000001            03604 ram_bank = 1
+0818   1207           03605         bcf TRISC,4
+0819   1283           03606         bcf STATUS,5
+  00000000            03607 ram_bank = 0
+081A   1607           03608         bsf PORTC,4
+  0000081B            03609 F1_000529 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
+081B   0008           03610         return
+081C                  03611 DataGonder
+  0000081C            03612 F1_000533 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SDA
+081C   1683           03613         bsf STATUS,5
+  00000001            03614 ram_bank = 1
+081D   1207           03615         bcf TRISC,4
+081E   1283           03616         bcf STATUS,5
+  00000000            03617 ram_bank = 0
+081F   1207           03618         bcf PORTC,4
+  00000820            03619 F1_000534 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+0820   3008           03620         movlw 8
+0821   00AE           03621         movwf PP0
+                      03622         set@page ID@LB104
+0824                  03623 ID@LB104
+0824   0BAE           03624         decfsz PP0,F
+0825   2824           03625         goto ID@LB104
+  00000826            03626 F1_000535 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
+0826   1683           03627         bsf STATUS,5
   00000001            03628 ram_bank = 1
-0843   1187           03629         bcf TRISC,3
-0844   1283           03630         bcf STATUS,5
+0827   1187           03629         bcf TRISC,3
+0828   1283           03630         bcf STATUS,5
   00000000            03631 ram_bank = 0
-0845   1587           03632         bsf PORTC,3
-  00000846            03633 F1_000524 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
-0846   0000           03634         nop
-0847   0000           03635         nop
-  00000848            03636 F1_000525 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SDA
-0848   1683           03637         bsf STATUS,5
-  00000001            03638 ram_bank = 1
-0849   1207           03639         bcf TRISC,4
-084A   1283           03640         bcf STATUS,5
-  00000000            03641 ram_bank = 0
-084B   1607           03642         bsf PORTC,4
-  0000084C            03643 F1_000530 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
-084C   0008           03644         return
-084D                  03645 DataGonder
-  0000084D            03646 F1_000534 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SDA
-084D   1683           03647         bsf STATUS,5
-  00000001            03648 ram_bank = 1
-084E   1207           03649         bcf TRISC,4
-084F   1283           03650         bcf STATUS,5
-  00000000            03651 ram_bank = 0
-0850   1207           03652         bcf PORTC,4
-  00000851            03653 F1_000535 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
-0851   3008           03654         movlw 8
-0852   00AE           03655         movwf PP0
-                      03656         set@page ID@LB104
-0855                  03657 ID@LB104
-0855   0BAE           03658         decfsz PP0,F
-0856   2855           03659         goto ID@LB104
-  00000857            03660 F1_000536 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
-0857   1683           03661         bsf STATUS,5
-  00000001            03662 ram_bank = 1
-0858   1187           03663         bcf TRISC,3
-0859   1283           03664         bcf STATUS,5
+0829   1187           03632         bcf PORTC,3
+  0000082A            03633 F1_000536 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+082A   3008           03634         movlw 8
+082B   00AE           03635         movwf PP0
+                      03636         set@page ID@LB105
+082E                  03637 ID@LB105
+082E   0BAE           03638         decfsz PP0,F
+082F   282E           03639         goto ID@LB105
+  00000830            03640 F1_000538 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $78
+0830   3078           03641         movlw 120
+0831   1683           03642         bsf STATUS,5
+  00000001            03643 ram_bank = 1
+0832   00E6           03644         movwf DATAm
+  00000833            03645 F1_000539 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
+0833   1283           03646         bcf STATUS,5
+  00000000            03647 ram_bank = 0
+                      03648         f@call Gonder
+  00000837            03649 F1_000540 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $40
+0837   3040           03650         movlw 64
+0838   1683           03651         bsf STATUS,5
+  00000001            03652 ram_bank = 1
+0839   00E6           03653         movwf DATAm
+  0000083A            03654 F1_000541 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
+083A   1283           03655         bcf STATUS,5
+  00000000            03656 ram_bank = 0
+                      03657         f@call Gonder
+  0000083E            03658 F1_000542 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = LcdData
+083E   1683           03659         bsf STATUS,5
+  00000001            03660 ram_bank = 1
+083F   0865           03661         movf LcdData,W
+0840   00E6           03662         movwf DATAm
+  00000841            03663 F1_000543 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
+0841   1283           03664         bcf STATUS,5
   00000000            03665 ram_bank = 0
-085A   1187           03666         bcf PORTC,3
-  0000085B            03667 F1_000537 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
-085B   3008           03668         movlw 8
-085C   00AE           03669         movwf PP0
-                      03670         set@page ID@LB105
-085F                  03671 ID@LB105
-085F   0BAE           03672         decfsz PP0,F
-0860   285F           03673         goto ID@LB105
-  00000861            03674 F1_000539 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $78
-0861   3078           03675         movlw 120
-0862   1683           03676         bsf STATUS,5
-  00000001            03677 ram_bank = 1
-0863   00E6           03678         movwf DATAm
-  00000864            03679 F1_000540 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
-0864   1283           03680         bcf STATUS,5
-  00000000            03681 ram_bank = 0
-                      03682         f@call Gonder
-  00000868            03683 F1_000541 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = $40
-0868   3040           03684         movlw 64
-0869   1683           03685         bsf STATUS,5
-  00000001            03686 ram_bank = 1
-086A   00E6           03687         movwf DATAm
-  0000086B            03688 F1_000542 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
-086B   1283           03689         bcf STATUS,5
-  00000000            03690 ram_bank = 0
-                      03691         f@call Gonder
-  0000086F            03692 F1_000543 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = LcdData
-086F   1683           03693         bsf STATUS,5
-  00000001            03694 ram_bank = 1
-0870   0865           03695         movf LcdData,W
-0871   00E6           03696         movwf DATAm
-  00000872            03697 F1_000544 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB Gonder
-0872   1283           03698         bcf STATUS,5
-  00000000            03699 ram_bank = 0
-                      03700         f@call Gonder
-  00000876            03701 F1_000547 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
-0876   1683           03702         bsf STATUS,5
-  00000001            03703 ram_bank = 1
-0877   1187           03704         bcf TRISC,3
-0878   1283           03705         bcf STATUS,5
-  00000000            03706 ram_bank = 0
-0879   1587           03707         bsf PORTC,3
-  0000087A            03708 F1_000548 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
-087A   0000           03709         nop
-087B   0000           03710         nop
-  0000087C            03711 F1_000549 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SDA
-087C   1683           03712         bsf STATUS,5
-  00000001            03713 ram_bank = 1
-087D   1207           03714         bcf TRISC,4
-087E   1283           03715         bcf STATUS,5
-  00000000            03716 ram_bank = 0
-087F   1607           03717         bsf PORTC,4
-  00000880            03718 F1_000551 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
-0880   0008           03719         return
-0881                  03720 Gonder
-  00000881            03721 F1_000557 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR don = 1 TO 8
-0881   3001           03722         movlw 1
-0882   1683           03723         bsf STATUS,5
-  00000001            03724 ram_bank = 1
-0883   00E7           03725         movwf don
-0884                  03726 FR@LB106
-0884   1283           03727         bcf STATUS,5
+                      03666         f@call Gonder
+  00000845            03667 F1_000546 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
+0845   1683           03668         bsf STATUS,5
+  00000001            03669 ram_bank = 1
+0846   1187           03670         bcf TRISC,3
+0847   1283           03671         bcf STATUS,5
+  00000000            03672 ram_bank = 0
+0848   1587           03673         bsf PORTC,3
+  00000849            03674 F1_000547 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+0849   0000           03675         nop
+084A   0000           03676         nop
+  0000084B            03677 F1_000548 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SDA
+084B   1683           03678         bsf STATUS,5
+  00000001            03679 ram_bank = 1
+084C   1207           03680         bcf TRISC,4
+084D   1283           03681         bcf STATUS,5
+  00000000            03682 ram_bank = 0
+084E   1607           03683         bsf PORTC,4
+  0000084F            03684 F1_000550 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
+084F   0008           03685         return
+0850                  03686 Gonder
+  00000850            03687 F1_000556 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR don = 1 TO 8
+0850   3001           03688         movlw 1
+0851   1683           03689         bsf STATUS,5
+  00000001            03690 ram_bank = 1
+0852   00E7           03691         movwf don
+0853                  03692 FR@LB106
+0853   1283           03693         bcf STATUS,5
+  00000000            03694 ram_bank = 0
+0854   3009           03695         movlw 9
+0855   1683           03696         bsf STATUS,5
+  00000001            03697 ram_bank = 1
+0856   0267           03698         subwf don,W
+                      03699         set@page NX@LB107
+0859   1283           03700         bcf STATUS,5
+  00000000            03701 ram_bank = 0
+085A   1803           03702         btfsc STATUS,0
+085B   2888           03703         goto NX@LB107
+  0000085C            03704 F1_000557 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DATAm.7 = 0 THEN
+                      03705         set@page BC@LL110
+085E   1683           03706         bsf STATUS,5
+  00000001            03707 ram_bank = 1
+085F   0D66           03708         rlf DATAm,W
+0860   1283           03709         bcf STATUS,5
+  00000000            03710 ram_bank = 0
+0861   1803           03711         btfsc STATUS,0
+0862   286A           03712         goto BC@LL110
+  00000863            03713 F1_000558 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SDA
+0863   1683           03714         bsf STATUS,5
+  00000001            03715 ram_bank = 1
+0864   1207           03716         bcf TRISC,4
+0865   1283           03717         bcf STATUS,5
+  00000000            03718 ram_bank = 0
+0866   1207           03719         bcf PORTC,4
+                      03720         f@jump BC@LL111
+086A                  03721 BC@LL110
+  0000086A            03722 F1_000559 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
+  0000086A            03723 F1_000560 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SDA
+086A   1683           03724         bsf STATUS,5
+  00000001            03725 ram_bank = 1
+086B   1207           03726         bcf TRISC,4
+086C   1283           03727         bcf STATUS,5
   00000000            03728 ram_bank = 0
-0885   3009           03729         movlw 9
-0886   1683           03730         bsf STATUS,5
-  00000001            03731 ram_bank = 1
-0887   0267           03732         subwf don,W
-                      03733         set@page NX@LB107
-088A   1283           03734         bcf STATUS,5
-  00000000            03735 ram_bank = 0
-088B   1803           03736         btfsc STATUS,0
-088C   28B9           03737         goto NX@LB107
-  0000088D            03738 F1_000558 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] if DATAm.7 = 0 THEN
-                      03739         set@page BC@LL110
-088F   1683           03740         bsf STATUS,5
-  00000001            03741 ram_bank = 1
-0890   0D66           03742         rlf DATAm,W
-0891   1283           03743         bcf STATUS,5
-  00000000            03744 ram_bank = 0
-0892   1803           03745         btfsc STATUS,0
-0893   289B           03746         goto BC@LL110
-  00000894            03747 F1_000559 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SDA
-0894   1683           03748         bsf STATUS,5
-  00000001            03749 ram_bank = 1
-0895   1207           03750         bcf TRISC,4
-0896   1283           03751         bcf STATUS,5
-  00000000            03752 ram_bank = 0
-0897   1207           03753         bcf PORTC,4
-                      03754         f@jump BC@LL111
-089B                  03755 BC@LL110
-  0000089B            03756 F1_000560 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] else
-  0000089B            03757 F1_000561 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SDA
-089B   1683           03758         bsf STATUS,5
-  00000001            03759 ram_bank = 1
-089C   1207           03760         bcf TRISC,4
-089D   1283           03761         bcf STATUS,5
-  00000000            03762 ram_bank = 0
-089E   1607           03763         bsf PORTC,4
-  0000089F            03764 F1_000562 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
-089F                  03765 BC@LL111
-  0000089F            03766 F1_000563 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = DATAm << 1
-089F   1003           03767         bcf STATUS,0
-08A0   1683           03768         bsf STATUS,5
-  00000001            03769 ram_bank = 1
-08A1   0DE6           03770         rlf DATAm,F
-  000008A2            03771 F1_000564 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
-08A2   0000           03772         nop
-08A3   0000           03773         nop
-  000008A4            03774 F1_000565 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
-08A4   1187           03775         bcf TRISC,3
-08A5   1283           03776         bcf STATUS,5
-  00000000            03777 ram_bank = 0
-08A6   1587           03778         bsf PORTC,3
-  000008A7            03779 F1_000566 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
-08A7   3007           03780         movlw 7
-08A8   00AE           03781         movwf PP0
-                      03782         set@page ID@LB112
-08AB                  03783 ID@LB112
-08AB   0BAE           03784         decfsz PP0,F
-08AC   28AB           03785         goto ID@LB112
-  000008AD            03786 F1_000567 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
-08AD   1683           03787         bsf STATUS,5
-  00000001            03788 ram_bank = 1
-08AE   1187           03789         bcf TRISC,3
-08AF   1283           03790         bcf STATUS,5
-  00000000            03791 ram_bank = 0
-08B0   1187           03792         bcf PORTC,3
-08B1                  03793 CT@LB108
-  000008B1            03794 F1_000568 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT don
-08B1   3001           03795         movlw 1
-08B2   1683           03796         bsf STATUS,5
-  00000001            03797 ram_bank = 1
-08B3   07E7           03798         addwf don,F
-                      03799         set@page FR@LB106
-08B6   1283           03800         bcf STATUS,5
-  00000000            03801 ram_bank = 0
-08B7   1C03           03802         btfss STATUS,0
-08B8   2884           03803         goto FR@LB106
-08B9                  03804 NX@LB107
-  000008B9            03805 F1_000571 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
-08B9   0000           03806         nop
-08BA   0000           03807         nop
-  000008BB            03808 F1_000572 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
-08BB   1683           03809         bsf STATUS,5
-  00000001            03810 ram_bank = 1
-08BC   1187           03811         bcf TRISC,3
-08BD   1283           03812         bcf STATUS,5
-  00000000            03813 ram_bank = 0
-08BE   1587           03814         bsf PORTC,3
-  000008BF            03815 F1_000573 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
-08BF   3007           03816         movlw 7
-08C0   00AE           03817         movwf PP0
-                      03818         set@page ID@LB113
-08C3                  03819 ID@LB113
-08C3   0BAE           03820         decfsz PP0,F
-08C4   28C3           03821         goto ID@LB113
-  000008C5            03822 F1_000574 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
-08C5   1683           03823         bsf STATUS,5
-  00000001            03824 ram_bank = 1
-08C6   1187           03825         bcf TRISC,3
-08C7   1283           03826         bcf STATUS,5
-  00000000            03827 ram_bank = 0
-08C8   1187           03828         bcf PORTC,3
-  000008C9            03829 F1_000575 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
-08C9   0008           03830         return
-08CA                  03831 SatirGonder
-  000008CA            03832 F1_000581 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR say = 0 TO 15
-08CA   1683           03833         bsf STATUS,5
-  00000001            03834 ram_bank = 1
-08CB   01D2           03835         clrf say
-08CC                  03836 FR@LB114
-08CC   1283           03837         bcf STATUS,5
-  00000000            03838 ram_bank = 0
-08CD   3010           03839         movlw 16
-08CE   1683           03840         bsf STATUS,5
-  00000001            03841 ram_bank = 1
-08CF   0252           03842         subwf say,W
-                      03843         set@page NX@LB115
-08D2   1283           03844         bcf STATUS,5
-  00000000            03845 ram_bank = 0
-08D3   1803           03846         btfsc STATUS,0
-08D4   28ED           03847         goto NX@LB115
-  000008D5            03848 F1_000582 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LcdData = Satir[say]
-08D5   1683           03849         bsf STATUS,5
-  00000001            03850 ram_bank = 1
-08D6   0852           03851         movf say,W
-08D7   3E44           03852         addlw Satir
-08D8   0084           03853         movwf FSR
-08D9   0800           03854         movf INDF,W
-08DA   00E5           03855         movwf LcdData
-  000008DB            03856 F1_000583 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB DataGonder
-08DB   1283           03857         bcf STATUS,5
-  00000000            03858 ram_bank = 0
-                      03859         f@call DataGonder
-  000008DF            03860 F1_000584 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
-08DF   3008           03861         movlw 8
-08E0   00AE           03862         movwf PP0
-                      03863         set@page ID@LB117
-08E3                  03864 ID@LB117
-08E3   0BAE           03865         decfsz PP0,F
-08E4   28E3           03866         goto ID@LB117
-08E5                  03867 CT@LB116
-  000008E5            03868 F1_000585 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT say
-08E5   3001           03869         movlw 1
-08E6   1683           03870         bsf STATUS,5
-  00000001            03871 ram_bank = 1
-08E7   07D2           03872         addwf say,F
-                      03873         set@page FR@LB114
-08EA   1283           03874         bcf STATUS,5
-  00000000            03875 ram_bank = 0
-08EB   1C03           03876         btfss STATUS,0
-08EC   28CC           03877         goto FR@LB114
-08ED                  03878 NX@LB115
-  000008ED            03879 F1_000587 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
-08ED   0008           03880         return
-  000008EE            03881 F1_000588 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] end
-08EE                  03882 PB@LB118
-                      03883         f@jump PB@LB118
-  000008F1            03884 F1_EOF equ $ ; RACAL_BCC39B_I2C_LCD.BAS
-08F1                  03885 PB@LB119
-                      03886         f@jump PB@LB119
-08F4                  03888 STR@LB1
-08F4   0020 0020 0020 03889         de 32,32,32,32,82,65,67,65,76,32,66,67,67,51,57,66,0
+086D   1607           03729         bsf PORTC,4
+  0000086E            03730 F1_000561 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] endif
+086E                  03731 BC@LL111
+  0000086E            03732 F1_000562 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DATAm = DATAm << 1
+086E   1003           03733         bcf STATUS,0
+086F   1683           03734         bsf STATUS,5
+  00000001            03735 ram_bank = 1
+0870   0DE6           03736         rlf DATAm,F
+  00000871            03737 F1_000563 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+0871   0000           03738         nop
+0872   0000           03739         nop
+  00000873            03740 F1_000564 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
+0873   1187           03741         bcf TRISC,3
+0874   1283           03742         bcf STATUS,5
+  00000000            03743 ram_bank = 0
+0875   1587           03744         bsf PORTC,3
+  00000876            03745 F1_000565 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
+0876   3007           03746         movlw 7
+0877   00AE           03747         movwf PP0
+                      03748         set@page ID@LB112
+087A                  03749 ID@LB112
+087A   0BAE           03750         decfsz PP0,F
+087B   287A           03751         goto ID@LB112
+  0000087C            03752 F1_000566 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
+087C   1683           03753         bsf STATUS,5
+  00000001            03754 ram_bank = 1
+087D   1187           03755         bcf TRISC,3
+087E   1283           03756         bcf STATUS,5
+  00000000            03757 ram_bank = 0
+087F   1187           03758         bcf PORTC,3
+0880                  03759 CT@LB108
+  00000880            03760 F1_000567 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT don
+0880   3001           03761         movlw 1
+0881   1683           03762         bsf STATUS,5
+  00000001            03763 ram_bank = 1
+0882   07E7           03764         addwf don,F
+                      03765         set@page FR@LB106
+0885   1283           03766         bcf STATUS,5
+  00000000            03767 ram_bank = 0
+0886   1C03           03768         btfss STATUS,0
+0887   2853           03769         goto FR@LB106
+0888                  03770 NX@LB107
+  00000888            03771 F1_000570 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 1
+0888   0000           03772         nop
+0889   0000           03773         nop
+  0000088A            03774 F1_000571 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] high SCL
+088A   1683           03775         bsf STATUS,5
+  00000001            03776 ram_bank = 1
+088B   1187           03777         bcf TRISC,3
+088C   1283           03778         bcf STATUS,5
+  00000000            03779 ram_bank = 0
+088D   1587           03780         bsf PORTC,3
+  0000088E            03781 F1_000572 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 9
+088E   3007           03782         movlw 7
+088F   00AE           03783         movwf PP0
+                      03784         set@page ID@LB113
+0892                  03785 ID@LB113
+0892   0BAE           03786         decfsz PP0,F
+0893   2892           03787         goto ID@LB113
+  00000894            03788 F1_000573 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] low SCL
+0894   1683           03789         bsf STATUS,5
+  00000001            03790 ram_bank = 1
+0895   1187           03791         bcf TRISC,3
+0896   1283           03792         bcf STATUS,5
+  00000000            03793 ram_bank = 0
+0897   1187           03794         bcf PORTC,3
+  00000898            03795 F1_000574 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
+0898   0008           03796         return
+0899                  03797 SatirGonder
+  00000899            03798 F1_000580 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] FOR say = 0 TO 15
+0899   1683           03799         bsf STATUS,5
+  00000001            03800 ram_bank = 1
+089A   01D2           03801         clrf say
+089B                  03802 FR@LB114
+089B   1283           03803         bcf STATUS,5
+  00000000            03804 ram_bank = 0
+089C   3010           03805         movlw 16
+089D   1683           03806         bsf STATUS,5
+  00000001            03807 ram_bank = 1
+089E   0252           03808         subwf say,W
+                      03809         set@page NX@LB115
+08A1   1283           03810         bcf STATUS,5
+  00000000            03811 ram_bank = 0
+08A2   1803           03812         btfsc STATUS,0
+08A3   28BC           03813         goto NX@LB115
+  000008A4            03814 F1_000581 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] LcdData = Satir[say]
+08A4   1683           03815         bsf STATUS,5
+  00000001            03816 ram_bank = 1
+08A5   0852           03817         movf say,W
+08A6   3E44           03818         addlw Satir
+08A7   0084           03819         movwf FSR
+08A8   0800           03820         movf INDF,W
+08A9   00E5           03821         movwf LcdData
+  000008AA            03822 F1_000582 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] GOSUB DataGonder
+08AA   1283           03823         bcf STATUS,5
+  00000000            03824 ram_bank = 0
+                      03825         f@call DataGonder
+  000008AE            03826 F1_000583 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] DELAYUS 10
+08AE   3008           03827         movlw 8
+08AF   00AE           03828         movwf PP0
+                      03829         set@page ID@LB117
+08B2                  03830 ID@LB117
+08B2   0BAE           03831         decfsz PP0,F
+08B3   28B2           03832         goto ID@LB117
+08B4                  03833 CT@LB116
+  000008B4            03834 F1_000584 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] NEXT say
+08B4   3001           03835         movlw 1
+08B5   1683           03836         bsf STATUS,5
+  00000001            03837 ram_bank = 1
+08B6   07D2           03838         addwf say,F
+                      03839         set@page FR@LB114
+08B9   1283           03840         bcf STATUS,5
+  00000000            03841 ram_bank = 0
+08BA   1C03           03842         btfss STATUS,0
+08BB   289B           03843         goto FR@LB114
+08BC                  03844 NX@LB115
+  000008BC            03845 F1_000586 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] return
+08BC   0008           03846         return
+  000008BD            03847 F1_000587 equ $ ; IN [RACAL_BCC39B_I2C_LCD.BAS] end
+08BD                  03848 PB@LB118
+                      03849         f@jump PB@LB118
+  000008C0            03850 F1_EOF equ $ ; RACAL_BCC39B_I2C_LCD.BAS
+08C0                  03851 PB@LB119
+                      03852         f@jump PB@LB119
+08C3                  03854 STR@LB1
+08C3   0020 0020 0020 03855         de 32,32,32,32,82,65,67,65,76,32,66,67,67,51,57,66,0
        0020 0052 0041 
        0043 0041 004C 
        0020 0042 0043 
        0043 0033 0039 
        0042 0000 
-0905                  03890 STR@LB2
-0905   0020 0028 0043 03891         de 32,40,67,41,50,48,49,53,32,84,65,55,87,32,66,97,114,105,115,0
+08D4                  03856 STR@LB2
+08D4   0020 0028 0043 03857         de 32,40,67,41,50,48,49,53,32,84,65,55,87,32,66,97,114,105,115,0
        0029 0032 0030 
        0031 0035 0020 
        0054 0041 0037 
        0057 0020 0042 
        0061 0072 0069 
        0073 0000 
-0919                  03892 STR@LB3
-0919   0020 0020 0044 03893         de 32,32,68,73,83,80,76,65,89,32,84,69,83,84,73,78,71,0
+08E8                  03858 STR@LB3
+08E8   0020 0020 0044 03859         de 32,32,68,73,83,80,76,65,89,32,84,69,83,84,73,78,71,0
        0049 0053 0050 
        004C 0041 0059 
        0020 0054 0045 
        0053 0054 0049 
        004E 0047 0000 
-092B                  03894 STR@LB4
-092B   0046 0072 0065 03895         de 70,114,101,107,97,110,115,32,58,32,0
+08FA                  03860 STR@LB4
+08FA   0046 0072 0065 03861         de 70,114,101,107,97,110,115,32,58,32,0
        006B 0061 006E 
        0073 0020 003A 
        0020 0000 
-0936                  03896 STR@LB5
-0936   0050 0057 0052 03897         de 80,87,82,32,58,32,72,73,71,72,0
+0905                  03862 STR@LB5
+0905   0050 0057 0052 03863         de 80,87,82,32,58,32,72,73,71,72,0
        0020 003A 0020 
        0048 0049 0047 
        0048 0000 
-0941                  03898 STR@LB6
-0941   0050 0057 0052 03899         de 80,87,82,32,58,32,76,79,87,32,0
+0910                  03864 STR@LB6
+0910   0050 0057 0052 03865         de 80,87,82,32,58,32,76,79,87,32,0
        0020 003A 0020 
        004C 004F 0057 
        0020 0000 
-094C                  03900 STR@LB7
-094C   004D 004F 0044 03901         de 77,79,68,32,58,32,85,83,66,32,0
+091B                  03866 STR@LB7
+091B   004D 004F 0044 03867         de 77,79,68,32,58,32,85,83,66,32,0
        0020 003A 0020 
        0055 0053 0042 
        0020 0000 
-0957                  03902 STR@LB8
-0957   004D 004F 0044 03903         de 77,79,68,32,58,32,76,83,66,32,0
+0926                  03868 STR@LB8
+0926   004D 004F 0044 03869         de 77,79,68,32,58,32,76,83,66,32,0
        0020 003A 0020 
        004C 0053 0042 
        0020 0000 
-0962                  03904 STR@LB9
-0962   004B 0061 006E 03905         de 75,97,110,97,108,32,58,32,0
+0931                  03870 STR@LB9
+0931   004B 0061 006E 03871         de 75,97,110,97,108,32,58,32,0
        0061 006C 0020 
        003A 0020 0000 
-096B                  03906 __EOF
-2007   3D7A           03907 __config FOSC_HS&WDTE_OFF&PWRTE_OFF&BOREN_ON&LVP_OFF&CPD_OFF&WRT_OFF&DEBUG_OFF&CP_OFF
-                      03908         end
-MPASM  5.45                               A.S   11-7-2015  21:51:56         PAGE  2
+093A                  03872 __EOF
+2007   3D7A           03873 __config FOSC_HS&WDTE_OFF&PWRTE_OFF&BOREN_ON&LVP_OFF&CPD_OFF&WRT_OFF&DEBUG_OFF&CP_OFF
+                      03874         end
+MPASM  5.45                               A.S   11-7-2015  22:02:02         PAGE  2
 
 
 SYMBOL TABLE
@@ -3967,10 +3933,10 @@ BANK2_START                       0X0110
 BANK3_END                         0X01EF
 BANK3_START                       0X0190
 BASLA                             00000164
-BC@LL101                          00000817
+BC@LL101                          000007E6
 BC@LL11                           00000141
-BC@LL110                          0000089B
-BC@LL111                          0000089F
+BC@LL110                          0000086A
+BC@LL111                          0000086E
 BC@LL13                           0000046C
 BC@LL14                           00000478
 BC@LL16                           0000048D
@@ -3991,43 +3957,43 @@ BC@LL37                           00000585
 BC@LL38                           0000058D
 BC@LL40                           000005A0
 BC@LL41                           000005A8
-BC@LL43                           000005C4
-BC@LL44                           000005CC
-BC@LL46                           000005E1
-BC@LL47                           000005E9
-BC@LL49                           000005FC
-BC@LL50                           00000604
-BC@LL52                           00000617
-BC@LL53                           0000061F
-BC@LL55                           00000638
-BC@LL56                           0000063B
-BC@LL58                           0000064A
-BC@LL59                           0000064C
+BC@LL43                           000005C8
+BC@LL44                           000005CB
+BC@LL46                           000005DA
+BC@LL47                           000005DC
+BC@LL49                           00000620
+BC@LL50                           00000622
+BC@LL52                           00000631
+BC@LL53                           00000633
+BC@LL55                           00000640
+BC@LL56                           00000642
+BC@LL58                           0000064F
+BC@LL59                           00000651
 BC@LL6                            00000145
-BC@LL61                           00000695
-BC@LL62                           00000698
-BC@LL64                           000006AB
-BC@LL65                           000006AE
-BC@LL67                           000006BF
-BC@LL68                           000006C1
-BC@LL70                           000006D2
-BC@LL71                           000006D8
-BC@LL73                           0000076F
-BC@LL75                           0000077B
-BC@LL77                           00000787
-BC@LL79                           00000793
+BC@LL61                           00000664
+BC@LL62                           00000667
+BC@LL64                           0000067A
+BC@LL65                           0000067D
+BC@LL67                           0000068E
+BC@LL68                           00000690
+BC@LL70                           000006A1
+BC@LL71                           000006A7
+BC@LL73                           0000073E
+BC@LL75                           0000074A
+BC@LL77                           00000756
+BC@LL79                           00000762
 BC@LL8                            0000013A
-BC@LL81                           0000079F
-BC@LL83                           000007AB
-BC@LL85                           000007B7
-BC@LL87                           000007C3
-BC@LL89                           000007CF
+BC@LL81                           0000076E
+BC@LL83                           0000077A
+BC@LL85                           00000786
+BC@LL87                           00000792
+BC@LL89                           0000079E
 BC@LL9                            00000144
-BC@LL91                           000007DB
-BC@LL93                           000007E7
-BC@LL95                           000007F3
-BC@LL97                           000007FF
-BC@LL99                           0000080B
+BC@LL91                           000007AA
+BC@LL93                           000007B6
+BC@LL95                           000007C2
+BC@LL97                           000007CE
+BC@LL99                           000007DA
 BCLIE                             00000003
 BCLIF                             00000003
 BF                                00000000
@@ -4055,7 +4021,7 @@ C                                 00000000
 C@STROUT                          00000099
 C@STROUTLP                        0000009B
 C@STROUTW                         0000009A
-CALCVALUE                         000006E0
+CALCVALUE                         000006AF
 CCP1CON                           00000017
 CCP1IE                            00000002
 CCP1IF                            00000002
@@ -4099,12 +4065,12 @@ CP_UPPER_256                      00002FEF
 CREN                              00000004
 CSRC                              00000007
 CSTR#CT                           00000022
-CT@LB108                          000008B1
-CT@LB116                          000008E5
+CT@LB108                          00000880
+CT@LB116                          000008B4
 CT@LB4                            00000102
 CURRENT@PAGE                      00000000
 CURS@                             00000044
-DATAGONDER                        0000084D
+DATAGONDER                        0000081C
 DATAM                             000000E6
 DATA_ADDRESS                      00000005
 DC                                00000001
@@ -4476,164 +4442,163 @@ F1_000368                         000005A8
 F1_000370                         000005A8
 F1_000371                         000005AB
 F1_000374                         000005AF
-F1_000375                         000005B9
-F1_000376                         000005C4
-F1_000377                         000005C4
-F1_000378                         000005CC
-F1_000379                         000005CC
-F1_000380                         000005D6
-F1_000381                         000005E1
-F1_000382                         000005E1
-F1_000383                         000005E9
-F1_000384                         000005E9
-F1_000385                         000005F1
-F1_000386                         000005FC
-F1_000387                         000005FC
-F1_000388                         00000604
-F1_000389                         00000604
-F1_000390                         0000060C
-F1_000391                         00000617
-F1_000392                         00000617
-F1_000393                         0000061F
-F1_000395                         0000061F
-F1_000396                         00000623
-F1_000397                         00000625
-F1_000398                         00000626
-F1_000399                         00000627
-F1_000400                         00000631
-F1_000401                         00000633
-F1_000402                         00000638
-F1_000403                         00000638
-F1_000404                         0000063A
-F1_000405                         0000063B
-F1_000406                         0000063B
-F1_000407                         0000063D
-F1_000408                         00000645
-F1_000409                         0000064A
-F1_000410                         0000064A
-F1_000411                         0000064C
-F1_000412                         0000064C
-F1_000413                         0000064E
-F1_000414                         00000654
-F1_000415                         0000065A
-F1_000416                         0000065C
-F1_000417                         00000662
-F1_000418                         00000668
-F1_000419                         0000066E
-F1_000421                         00000674
-F1_000422                         00000677
-F1_000423                         0000067A
-F1_000424                         0000067D
-F1_000425                         00000681
-F1_000426                         00000683
-F1_000427                         00000684
-F1_000428                         00000685
-F1_000429                         00000686
-F1_000430                         0000068E
-F1_000431                         00000690
-F1_000432                         00000695
-F1_000433                         00000695
-F1_000434                         00000697
-F1_000435                         00000698
-F1_000436                         00000698
-F1_000437                         0000069A
-F1_000438                         0000069B
-F1_000439                         0000069C
-F1_000440                         000006A4
-F1_000441                         000006A6
-F1_000442                         000006AB
-F1_000443                         000006AB
-F1_000444                         000006AD
-F1_000445                         000006AE
-F1_000446                         000006AE
-F1_000447                         000006B0
-F1_000448                         000006BA
-F1_000449                         000006BF
-F1_000450                         000006BF
-F1_000451                         000006C1
-F1_000453                         000006C1
-F1_000454                         000006C9
-F1_000455                         000006CB
-F1_000456                         000006CD
-F1_000457                         000006D2
-F1_000458                         000006D2
-F1_000459                         000006D4
-F1_000460                         000006D6
-F1_000461                         000006D8
-F1_000464                         000006D8
-F1_000465                         000006DB
-F1_000469                         000006DE
-F1_000474                         000006E0
-F1_000475                         00000764
-F1_000476                         00000766
-F1_000477                         00000770
-F1_000478                         0000077C
-F1_000479                         00000788
-F1_000480                         00000794
-F1_000481                         000007A0
-F1_000482                         000007AC
-F1_000483                         000007B8
-F1_000484                         000007C4
-F1_000485                         000007D0
-F1_000486                         000007DC
-F1_000487                         000007E8
-F1_000488                         000007F4
-F1_000489                         00000800
-F1_000490                         0000080C
-F1_000506                         00000818
-F1_000510                         00000819
-F1_000511                         0000081D
-F1_000512                         00000823
-F1_000513                         00000827
-F1_000515                         0000082D
-F1_000516                         00000830
-F1_000517                         00000834
-F1_000518                         00000837
-F1_000519                         0000083B
-F1_000520                         0000083E
-F1_000523                         00000842
-F1_000524                         00000846
-F1_000525                         00000848
-F1_000530                         0000084C
-F1_000534                         0000084D
-F1_000535                         00000851
-F1_000536                         00000857
-F1_000537                         0000085B
-F1_000539                         00000861
-F1_000540                         00000864
-F1_000541                         00000868
-F1_000542                         0000086B
-F1_000543                         0000086F
-F1_000544                         00000872
-F1_000547                         00000876
-F1_000548                         0000087A
-F1_000549                         0000087C
-F1_000551                         00000880
-F1_000557                         00000881
-F1_000558                         0000088D
-F1_000559                         00000894
-F1_000560                         0000089B
-F1_000561                         0000089B
-F1_000562                         0000089F
-F1_000563                         0000089F
-F1_000564                         000008A2
-F1_000565                         000008A4
-F1_000566                         000008A7
-F1_000567                         000008AD
-F1_000568                         000008B1
-F1_000571                         000008B9
-F1_000572                         000008BB
-F1_000573                         000008BF
-F1_000574                         000008C5
-F1_000575                         000008C9
-F1_000581                         000008CA
-F1_000582                         000008D5
-F1_000583                         000008DB
-F1_000584                         000008DF
-F1_000585                         000008E5
-F1_000587                         000008ED
-F1_000588                         000008EE
-F1_EOF                            000008F1
+F1_000375                         000005B3
+F1_000376                         000005B5
+F1_000377                         000005B6
+F1_000378                         000005B7
+F1_000379                         000005C1
+F1_000380                         000005C3
+F1_000381                         000005C8
+F1_000382                         000005C8
+F1_000383                         000005CA
+F1_000384                         000005CB
+F1_000385                         000005CB
+F1_000386                         000005CD
+F1_000387                         000005D5
+F1_000388                         000005DA
+F1_000389                         000005DA
+F1_000390                         000005DC
+F1_000391                         000005DC
+F1_000392                         000005DE
+F1_000393                         000005E4
+F1_000394                         000005EA
+F1_000395                         000005EC
+F1_000396                         000005F2
+F1_000397                         000005F8
+F1_000398                         000005FE
+F1_000400                         00000604
+F1_000401                         00000607
+F1_000402                         0000060A
+F1_000403                         0000060D
+F1_000404                         00000611
+F1_000405                         0000061B
+F1_000406                         00000620
+F1_000407                         00000620
+F1_000408                         00000622
+F1_000409                         00000622
+F1_000410                         0000062C
+F1_000411                         00000631
+F1_000412                         00000631
+F1_000413                         00000633
+F1_000414                         00000633
+F1_000415                         0000063B
+F1_000416                         00000640
+F1_000417                         00000640
+F1_000418                         00000642
+F1_000419                         00000642
+F1_000420                         0000064A
+F1_000421                         0000064F
+F1_000422                         0000064F
+F1_000423                         00000651
+F1_000425                         00000651
+F1_000426                         00000653
+F1_000427                         00000654
+F1_000428                         00000655
+F1_000429                         0000065D
+F1_000430                         0000065F
+F1_000431                         00000664
+F1_000432                         00000664
+F1_000433                         00000666
+F1_000434                         00000667
+F1_000435                         00000667
+F1_000436                         00000669
+F1_000437                         0000066A
+F1_000438                         0000066B
+F1_000439                         00000673
+F1_000440                         00000675
+F1_000441                         0000067A
+F1_000442                         0000067A
+F1_000443                         0000067C
+F1_000444                         0000067D
+F1_000445                         0000067D
+F1_000446                         0000067F
+F1_000447                         00000689
+F1_000448                         0000068E
+F1_000449                         0000068E
+F1_000450                         00000690
+F1_000452                         00000690
+F1_000453                         00000698
+F1_000454                         0000069A
+F1_000455                         0000069C
+F1_000456                         000006A1
+F1_000457                         000006A1
+F1_000458                         000006A3
+F1_000459                         000006A5
+F1_000460                         000006A7
+F1_000463                         000006A7
+F1_000464                         000006AA
+F1_000468                         000006AD
+F1_000473                         000006AF
+F1_000474                         00000733
+F1_000475                         00000735
+F1_000476                         0000073F
+F1_000477                         0000074B
+F1_000478                         00000757
+F1_000479                         00000763
+F1_000480                         0000076F
+F1_000481                         0000077B
+F1_000482                         00000787
+F1_000483                         00000793
+F1_000484                         0000079F
+F1_000485                         000007AB
+F1_000486                         000007B7
+F1_000487                         000007C3
+F1_000488                         000007CF
+F1_000489                         000007DB
+F1_000505                         000007E7
+F1_000509                         000007E8
+F1_000510                         000007EC
+F1_000511                         000007F2
+F1_000512                         000007F6
+F1_000514                         000007FC
+F1_000515                         000007FF
+F1_000516                         00000803
+F1_000517                         00000806
+F1_000518                         0000080A
+F1_000519                         0000080D
+F1_000522                         00000811
+F1_000523                         00000815
+F1_000524                         00000817
+F1_000529                         0000081B
+F1_000533                         0000081C
+F1_000534                         00000820
+F1_000535                         00000826
+F1_000536                         0000082A
+F1_000538                         00000830
+F1_000539                         00000833
+F1_000540                         00000837
+F1_000541                         0000083A
+F1_000542                         0000083E
+F1_000543                         00000841
+F1_000546                         00000845
+F1_000547                         00000849
+F1_000548                         0000084B
+F1_000550                         0000084F
+F1_000556                         00000850
+F1_000557                         0000085C
+F1_000558                         00000863
+F1_000559                         0000086A
+F1_000560                         0000086A
+F1_000561                         0000086E
+F1_000562                         0000086E
+F1_000563                         00000871
+F1_000564                         00000873
+F1_000565                         00000876
+F1_000566                         0000087C
+F1_000567                         00000880
+F1_000570                         00000888
+F1_000571                         0000088A
+F1_000572                         0000088E
+F1_000573                         00000894
+F1_000574                         00000898
+F1_000580                         00000899
+F1_000581                         000008A4
+F1_000582                         000008AA
+F1_000583                         000008AE
+F1_000584                         000008B4
+F1_000586                         000008BC
+F1_000587                         000008BD
+F1_EOF                            000008C0
 F1_SOF                            000000E5
 F2_EOF                            000000E5
 F2_SOF                            000000E5
@@ -4647,8 +4612,8 @@ FOSC_EXTRC                        00003FFF
 FOSC_HS                           00003FFE
 FOSC_LP                           00003FFC
 FOSC_XT                           00003FFD
-FR@LB106                          00000884
-FR@LB114                          000008CC
+FR@LB106                          00000853
+FR@LB114                          0000089B
 FR@LB2                            000000F0
 FRQDIGITS                         000000DC
 FRQDIGITS#0                       000000DC
@@ -4667,7 +4632,7 @@ GEN4                              00000025
 GEN4H                             00000026
 GIE                               INTCON,7
 GO                                00000002
-GONDER                            00000881
+GONDER                            00000850
 GO_DONE                           00000002
 HS_OSC                            00003FFE
 I2C_DATA                          00000005
@@ -4677,13 +4642,13 @@ I2C_STOP                          00000004
 I@NT                              000000D7
 IBF                               00000007
 IBOV                              00000005
-ID@LB102                          00000821
-ID@LB103                          0000082B
-ID@LB104                          00000855
-ID@LB105                          0000085F
-ID@LB112                          000008AB
-ID@LB113                          000008C3
-ID@LB117                          000008E3
+ID@LB102                          000007F0
+ID@LB103                          000007FA
+ID@LB104                          00000824
+ID@LB105                          0000082E
+ID@LB112                          0000087A
+ID@LB113                          00000892
+ID@LB117                          000008B2
 INDF                              00000000
 INTCON                            0000000B
 INTE                              INTCON,4
@@ -4693,7 +4658,7 @@ IRP                               00000007
 JUMP                              
 KATAR                             0000003E
 KATARH                            0000003F
-KOMUTGONDER                       00000819
+KOMUTGONDER                       000007E8
 LABEL_WORD                        
 LCD#DTPIN                         4
 LCD#DTPORT                        PORTD
@@ -4711,10 +4676,10 @@ LCDHAZIRLA                        0000018E
 LP_OSC                            00003FFC
 LVP_OFF                           00003F7F
 LVP_ON                            00003FFF
-M@LB2                             00000713
-M@LB3                             0000072A
-M@LB4                             00000741
-M@LB5                             00000758
+M@LB2                             000006E2
+M@LB3                             000006F9
+M@LB4                             00000710
+M@LB5                             00000727
 MYINTERRUPT                       00000110
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
@@ -4738,14 +4703,14 @@ NUM_FSR
 NUM_SFR                           
 NUM_WORD                          
 NUM_WREG                          
-NX@LB107                          000008B9
-NX@LB115                          000008ED
+NX@LB107                          00000888
+NX@LB115                          000008BC
 NX@LB3                            0000010A
 OBF                               00000006
 OERR                              00000001
 OPTION_REG                        00000081
-PB@LB118                          000008EE
-PB@LB119                          000008F1
+PB@LB118                          000008BD
+PB@LB119                          000008C0
 PBP#VAR0                          00000027
 PBP#VAR1                          00000028
 PBP#VAR2                          00000029
@@ -4875,7 +4840,7 @@ SATIR#6                           0000004A
 SATIR#7                           0000004B
 SATIR#8                           0000004C
 SATIR#9                           0000004D
-SATIRGONDER                       000008CA
+SATIRGONDER                       00000899
 SAY                               000000D2
 SCL                               PORTC,3
 SDA                               PORTC,4
@@ -4908,15 +4873,15 @@ SSPM3                             00000003
 SSPOV                             00000006
 SSPSTAT                           00000094
 STATUS                            00000003
-STR@LB1                           000008F4
-STR@LB2                           00000905
-STR@LB3                           00000919
-STR@LB4                           0000092B
-STR@LB5                           00000936
-STR@LB6                           00000941
-STR@LB7                           0000094C
-STR@LB8                           00000957
-STR@LB9                           00000962
+STR@LB1                           000008C3
+STR@LB2                           000008D4
+STR@LB3                           000008E8
+STR@LB4                           000008FA
+STR@LB5                           00000905
+STR@LB6                           00000910
+STR@LB7                           0000091B
+STR@LB8                           00000926
+STR@LB9                           00000931
 SYNC                              00000004
 T0CS                              00000005
 T0IE                              INTCON,5
@@ -5028,7 +4993,7 @@ __DELAY_MS_                       000000B5
 __DELAY_MS_W_                     000000B6
 __DELAY_US_                       000000C2
 __DELAY_US_W_                     000000C3
-__EOF                             0000096B
+__EOF                             0000093A
 __HBUS_BITRATE                    400
 __INTERRUPTS_ENABLED              1
 __LCD_DTPIN                       4
@@ -5084,18 +5049,17 @@ MEMORY USAGE MAP ('X' = USED,  '-' = UNUSED)
 0840 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
 0880 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
 08C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
-0900 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
-0940 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXX----- ----------------
+0900 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXX------
 2000 : -------X-------- ---------------- ---------------- ----------------
 
 ALL OTHER MEMORY BLOCKS UNUSED.
 
-PROGRAM MEMORY WORDS USED:  2411
-PROGRAM MEMORY WORDS FREE:  5781
+PROGRAM MEMORY WORDS USED:  2362
+PROGRAM MEMORY WORDS FREE:  5830
 
 
 ERRORS   :     0
-WARNINGS :     0 REPORTED,  1656 SUPPRESSED
-MESSAGES :     1 REPORTED,   266 SUPPRESSED
+WARNINGS :     0 REPORTED,  1560 SUPPRESSED
+MESSAGES :     1 REPORTED,   231 SUPPRESSED
 
 
