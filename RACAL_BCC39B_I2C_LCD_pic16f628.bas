@@ -2,9 +2,9 @@
 ' *                                               *
 ' * RACAL 398 - I2C LCD MODIFICATION              *
 ' *                                               *
-' * PORTB.0 DATA                                  *
+' * PORTB.0 CLK                                   *
 ' * PORTB.1 ENABLE                                *
-' * PORTB.3 CLK                                   *
+' * PORTB.3 DATA                                  *
 ' *                                               *
 ' * PORTC.3 SCL FOR LCD                           *
 ' * PORTC.4 SDA FOR LCD                           *
@@ -64,10 +64,10 @@ GoTo Basla
 myinterrupt:
     Context Save
     GIE = 0
-     
     If INTF = 1 Then
         'PortDurum = PORTB
         If PORTB.1 = 1 Then
+            PORTA.0 = 1
             'If PORTB.3 = 1 Then Degerler[Position] = 1 Else Degerler[Position] = 0
             Degerler[Position] = PORTB.3
             Position = Position + 1
