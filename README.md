@@ -38,6 +38,16 @@ Yapilacaklar:
 
 detaylar icin resimler klasorundeki resimlere bakabilirsin.
 
+NOT: ana unite icinde 3.6V bir batarya var. o bitik. haliyle kapatip acinca hafizalar siliniyor.
+bataryayi degistirince kanal hafizalari calisiyor..
+genel ozellikleri :
+- 0-30Mhz USB/LSB/CW
+- 99 kanal hafiza
+- Split mode operation
+- batarya ile 25W
+- sabit merkezde 150W
+- Anten Tuner Opsiyonu
+- 24V besleme
 
 Gule gule kullanin.. Acilis ekraninda TA7W cagri isretini birakirsaniz cok sevinirim.
 
