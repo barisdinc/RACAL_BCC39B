@@ -37,6 +37,7 @@ Yapilacaklar:
 
 
 detaylar icin resimler klasorundeki resimlere bakabilirsin.
+<A HREF=decs/MODIFIKASYON.png>Modifikasyon</A>
 
 NOT: ana unite icinde 3.6V bir batarya var. o bitik. haliyle kapatip acinca hafizalar siliniyor.
 bataryayi degistirince kanal hafizalari calisiyor..
