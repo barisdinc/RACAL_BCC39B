@@ -37,7 +37,11 @@ Yapilacaklar:
 
 
 detaylar icin resimler klasorundeki resimlere bakabilirsin.
-<A HREF=decs/MODIFIKASYON.png>Modifikasyon</A>
+<BR>
+<A HREF=https://github.com/barisdinc/RACAL_BCC39B/blob/master/docs/MODIFIKASYON.png>Modifikasyon</A><BR>
+<A HREF=https://github.com/barisdinc/RACAL_BCC39B/blob/master/docs/MODIFIKASYON_akim_sinirlama.jpg>Akim Sinirlamayi Iptal etme</A><BR>
+	
+
 
 NOT: ana unite icinde 3.6V bir batarya var. o bitik. haliyle kapatip acinca hafizalar siliniyor.
 bataryayi degistirince kanal hafizalari calisiyor..
