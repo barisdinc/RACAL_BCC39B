@@ -4,6 +4,7 @@
 ; Written by Les Johnson. May 2012
 ;----------------------------------------------------------
 ;
+; TODO : willbeported to smaller MCUs
  LIST  P = 16F877, F = INHX8M, W = 2, X = ON, R = DEC, MM = ON, N = 0, C = 255
 INDF equ 0X0000
 TMR0 equ 0X0001
