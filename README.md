@@ -57,6 +57,10 @@ genel ozellikleri :
 Gule gule kullanin.. Acilis ekraninda TA7W cagri isretini birakirsaniz cok sevinirim.
 
 
+Eklenti (2018) : sayfadaki aciklamalari google ceviri ile cevirip uygulayan, ve uyguladiktan sonra guzel bir video hazirlayarak bizimle paylasan Peru'lu amator arkadasimiz ED'in (OA4BSA) videosunu su adreste izleyebilirsiniz ;
+https://www.youtube.com/watch?v=66daxXNel5M&list=PLecaGE98mtkhiSHbvTL7y0PZfzCT7FX8e&index=7
+https://www.youtube.com/watch?v=lHnuISl4arE&list=PLecaGE98mtkhiSHbvTL7y0PZfzCT7FX8e&index=6
+
 Eklenti (Temmuz 2019) : Bu projeyle ilgili cektigim birkac deneme videosunu su adreste bulabilirsiniz;
 https://www.youtube.com/playlist?list=PLecaGE98mtkhiSHbvTL7y0PZfzCT7FX8e
 
