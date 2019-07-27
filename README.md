@@ -56,6 +56,13 @@ genel ozellikleri :
 
 Gule gule kullanin.. Acilis ekraninda TA7W cagri isretini birakirsaniz cok sevinirim.
 
+
+Eklenti (Temmuz 2019) : Bu projeyle ilgili cektigim birkac deneme videosunu su adreste bulabilirsiniz;
+https://www.youtube.com/playlist?list=PLecaGE98mtkhiSHbvTL7y0PZfzCT7FX8e
+
+
+
+
 Bilgi paylastikca cogalir
 73's de TA7W
 Baris DINC
